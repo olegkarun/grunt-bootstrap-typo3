@@ -11,7 +11,8 @@
 !/src
 !/src/**/*
 !/index.html
-!/index.ejs
+!/html/
+
 !/package.json
 !/webpack.config.js
 !/webpack.config(2).js
