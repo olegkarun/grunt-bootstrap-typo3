@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18">
+    <g>
+        <g>
+            <g>
+                <path fill="none" stroke-linecap="square" stroke-miterlimit="20" stroke-width="2" d="M1.5 16.142L15.642 2"/>
+            </g>
+            <g>
+                <path fill="none"  stroke-linecap="square" stroke-miterlimit="20" stroke-width="2" d="M15.642 16.142L1.5 2"/>
+            </g>
+        </g>
+    </g>
+</svg>
