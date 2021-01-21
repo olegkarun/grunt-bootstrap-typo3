@@ -1,0 +1,39 @@
+//https://daneden.github.io/animate.css/
+//https://michalsnik.github.io/aos/
+
+@import "animate.css/import"; 
+
+@include media-breakpoint-up(lg) {
+    [data-aos] {
+        visibility: hidden;
+    }
+    
+    [data-aos="none"] {
+        visibility: visible;
+    }
+    
+    [data-aos].animated {
+        visibility: visible;
+    }
+}
+
+
+$delay-inc: 100;
+@while $delay-inc < 3600 {
+    [data-aos][data-aos-delay="#{$delay-inc}"].animated, 
+    body[data-aos-delay="#{$delay-inc}"] [data-aos].animated {
+        animation-delay:#{$delay-inc}ms;
+    }
+    $delay-inc: $delay-inc + 100;
+}  
+
+$duration-inc: 100;
+@while $duration-inc < 3600 {
+    
+    body[data-aos-duration="#{$duration-inc}"] .animated, 
+    body [data-aos][data-aos-duration="#{$duration-inc}"].animated{
+        animation-duration:#{$duration-inc}ms;
+    }
+    $duration-inc: $duration-inc + 100;
+}  
+

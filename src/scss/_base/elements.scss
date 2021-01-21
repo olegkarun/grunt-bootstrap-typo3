@@ -1,0 +1,39 @@
+.list-normal{
+    list-style: none;
+    position: relative;
+    & > li{
+        &::before {
+            content: '-';
+            position: absolute;
+            left: 1rem;
+        }
+    }
+    ul{
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.list-styled{
+    list-style:none;
+    
+    li{
+        position: relative;
+        margin-bottom: 0.5rem;
+        &::before {
+            content:'';
+            left: -1.5rem;
+            position: absolute;
+            top: 0.25rem;
+            width: 18px;
+            height: 18px;
+            @include svgicons(theme-color("primary"), 'list-check');
+        }
+    }
+    
+    ul{
+        list-style: none; 
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}

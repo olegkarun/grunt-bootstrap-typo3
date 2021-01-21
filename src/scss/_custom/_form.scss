@@ -1,0 +1,11 @@
+//disable autofill background
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus,
+.form-control:-webkit-autofill:active {
+    transition: background-color 500000s ease 0s;
+} 
+.edge-autofilled{
+    transition: all 500000s ease 0s;
+} 
+  

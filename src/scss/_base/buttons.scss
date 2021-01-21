@@ -1,0 +1,81 @@
+$btn-icon-gutter: 5px;
+
+//custom type of button
+.btn-link{
+    color: $body-color;
+    padding: 0;
+    
+    @include hover() {
+        text-decoration: none;
+        color: $body-color;
+        svg{
+            fill: $body-color;;
+        }
+    }
+}
+
+//outline buttons modification
+@each $color, $value in $theme-colors {
+    .btn.btn-outline-#{$color} {
+        svg{
+            fill: $value;
+        }
+        @include hover() {
+            svg{
+                fill: color-yiq($value);
+            }
+        }
+    } 
+} 
+
+//normal buttons modification
+@each $color, $value in $theme-colors {
+    .btn.btn-#{$color} {
+        svg{
+            fill: color-yiq($value);
+        }
+        @include hover() {
+            svg{
+                fill: color-yiq($value);
+            }
+        }
+    }
+}
+
+
+
+//buton icon logic
+
+.btn{
+    display: inline-flex;
+    align-items: center;
+    svg{
+        max-width: 20px;
+        max-height: 20px;
+        @include transition(all 0.15s ease-in-out, left 0.15s ease-in-out, right 0.15s ease-in-out); //check $btn-transition
+    }
+    &:focus, &:active{
+        outline:0; 
+        box-shadow: none;
+    }   
+
+    .arrow-right, .arrow-left{
+        position: relative;
+    }
+    .arrow-right{
+        margin-left: $btn-icon-gutter;
+        right:0;
+    }
+    .arrow-left{
+        margin-right: $btn-icon-gutter;
+        left:0;
+    } 
+    @include hover(){
+        .arrow-right{
+            right: - $btn-icon-gutter;
+        }
+        .arrow-left{
+            left: - $btn-icon-gutter;
+        }
+    }
+} 

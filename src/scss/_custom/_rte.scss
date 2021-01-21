@@ -1,0 +1,66 @@
+//custom set for RTE
+
+
+//setup custom icon display
+
+@mixin rte-link-arrow($color) {
+    position:relative;
+    &:after{
+        content: '';
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin-left: 5px;
+        position: relative;
+        @include svgicons($color, 'right-arrow'); 
+        @include transition(all 0.15s ease-in-out, left 0.15s ease-in-out, right 0.15s ease-in-out); //check $btn-transition
+
+    }
+    @include hover(){
+        &:after{
+            right: - $btn-icon-gutter;
+        }
+    }  
+}
+
+//build custom setip just link
+
+.btn-rte-link{
+    @include rte-link-arrow($body-color);
+    @extend .btn;
+    @extend .btn-link;
+}
+
+.btn-rte{ 
+    
+    @extend .btn;
+    @extend .btn-primary;
+
+    @include rte-link-arrow(
+    color-yiq(theme-color("primary"))
+    );
+    
+    @include hover(){
+        &:after{
+            @include svgicons(
+            color-yiq(theme-color("primary")),
+            'right-arrow'
+            );
+        } 
+    }
+}   
+
+//build custom setip outline buttom style
+.btn-rte-outline{
+    @include rte-link-arrow(theme-color("primary"));
+    @extend .btn;
+    @extend .btn-outline-primary;
+    @include hover(){
+        &:after{
+            @include svgicons(
+            color-yiq(theme-color("primary")), 
+            'right-arrow'
+            );
+        }
+    }
+} 

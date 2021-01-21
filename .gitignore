@@ -1,0 +1,20 @@
+# This uses a whitelist strategy
+
+# At first nothing is included in git at all
+/*
+# with the exclamation mark (!) there are several
+# files and folders included back again
+!/.editorconfig
+!/.jshintrc
+
+!/.gitignore
+!/src
+!/src/**/*
+!/index.html
+!/index.ejs
+!/package.json
+!/webpack.config.js
+!/webpack.config(2).js
+!/package-lock.json
+!/postcss.config.js
+!/README.md

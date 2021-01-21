@@ -1,0 +1,121 @@
+//custom box spacing
+$spacer-extra-small: rem(20px);
+$spacer-small: rem(40px);
+$spacer-medium: rem(50px);
+$spacer-large: rem(80px);
+$spacer-extra-large: rem(120px); 
+
+
+
+body, main .content-item{
+
+    &.mb-no, .mb-no{ 
+        margin-bottom: 0;
+    } 
+
+    &.mb-extra-small, .mb-extra-small{
+        margin-bottom: $spacer-extra-small;
+    }
+
+    &.mb-small, .mb-small{
+        margin-bottom: $spacer-small;
+        @include media-breakpoint-down(md) {
+            margin-bottom: $spacer-extra-small; 
+        }
+    }
+
+    &.mb-medium, .mb-medium{
+        margin-bottom: $spacer-medium;
+        @include media-breakpoint-down(md) {
+            margin-bottom: $spacer-small;
+        }
+    }
+
+    &.mb-large, .mb-large{
+        margin-bottom: $spacer-large;
+        @include media-breakpoint-down(md) {
+            margin-bottom: $spacer-medium;
+        }
+    }
+
+    &.mb-extra-large, .mb-extra-large{
+        margin-bottom: $spacer-extra-large;
+        @include media-breakpoint-down(md) {
+            margin-bottom: $spacer-medium;
+        }
+    }
+
+    //before
+
+    &.pt-no, .pt-no{ 
+        padding-top: 0;
+    } 
+
+    &.pt-extra-small, .pt-extra-small{
+        padding-top: $spacer-extra-small;
+    }
+
+    &.pt-small, .pt-small{
+        padding-top: $spacer-small;
+        @include media-breakpoint-down(md) {
+            padding-top: $spacer-extra-small; 
+        }
+    }
+
+    &.pt-medium, .pt-medium{
+        padding-top: $spacer-medium;
+        @include media-breakpoint-down(md) {
+            padding-top: $spacer-small; 
+        }
+    }
+
+    &.pt-large, .pt-large{
+        padding-top: $spacer-large;
+        @include media-breakpoint-down(md) {
+            padding-top: $spacer-medium; 
+        }
+    }
+
+    &.pt-extra-large, .pt-extra-large{
+        padding-top: $spacer-extra-large;
+        @include media-breakpoint-down(md) {
+            padding-top: $spacer-medium; 
+        }
+    }    
+
+}
+
+
+
+@include media-breakpoint-up(lg) {
+    //centyer by  
+   .align-content-6{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50%;
+    }    
+    .align-content-8{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 66.6666666667%;
+    }
+    .align-content-10{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 83.3333333333%;
+    }
+    .align-content-11{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 91.66667%;
+    }
+    .align-content-11-right{
+        margin-left: auto;
+        max-width: 91.66667%;
+    }
+    .align-content-11-left{
+        margin-right: auto;
+        max-width: 91.66667%;
+    }    
+    
+}

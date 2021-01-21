@@ -1,0 +1,10 @@
+.outbox{
+    padding-bottom:1px;
+    &.gray{
+        background: $gray-200;
+        //optional content chnages
+        hr{
+            border-top-color: $white;
+        }
+    }
+}

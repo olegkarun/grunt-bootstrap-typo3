@@ -1,0 +1,35 @@
+body{
+    .cc_dialog.simple{
+        .cc_dialog_headline{
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 1.5rem !important;
+            max-width: 100%;
+            .cc_dialog .cc_dialog_headline {
+                line-height: 1.1;
+            }
+        }
+
+        @include media-breakpoint-down(xs) {
+ 
+            button{
+                display: block;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            height:100%; 
+            overflow: hidden;
+            padding: 0 !important;
+            &> div{
+                padding: 1rem !important;
+                overflow: scroll;
+                height: 100%;
+            }
+        }
+    }
+}
