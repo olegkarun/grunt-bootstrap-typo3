@@ -42,6 +42,11 @@ $btn-icon-gutter: 5px;
     }
 }
 
+.btn-primary{
+    @include hover(){
+        background: $brand-red-dark;
+    }
+}
 
 
 //buton icon logic

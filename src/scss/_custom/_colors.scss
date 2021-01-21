@@ -1,5 +1,11 @@
 //use custom colors with prefix '$brand'
-$brand-blue: blue;
+$white: #ffffff;
+$brand-gray-light: #f4f4f4;
+$brand-gray: #b9b9b9;
+$brand-gray-dark: #585858;
+$brand-red: #db0d15;
+$brand-red-dark: #961108;
+
 
 
 // Color system
@@ -63,7 +69,7 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $blue !default;
+$primary:       $brand-red;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -105,3 +111,7 @@ $escaped-characters: (
   ("(", "%28"),
   (")", "%29"),
 ) !default;
+
+
+
+$body-color: $black;
