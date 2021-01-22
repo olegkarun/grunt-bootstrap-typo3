@@ -1,8 +1,6 @@
+
+//** CUSTOM CODE **/
 .custom-video{
-    @include media-breakpoint-down(xs) {
-        margin-left: rem($grid-gutter-width-sm) * -1;
-        margin-right: rem($grid-gutter-width-sm) * -1;
-    }
 
     .vjs-big-play-button {
         background-color: transparent;

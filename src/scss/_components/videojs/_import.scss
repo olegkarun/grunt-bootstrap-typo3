@@ -2,7 +2,7 @@
 @import "~video.js/src/css/private-variables";
 @import "~video.js/src/css/utilities";
 
-@import "~/videojs-font/scss/icons";
+@import "~videojs-font/scss/icons";
 
 @import "~video.js/src/css/components/layout";
 @import "~video.js/src/css/components/big-play";
@@ -66,4 +66,4 @@
   background: none;
 }
 
-@import "_custom";
+//@import "custom";

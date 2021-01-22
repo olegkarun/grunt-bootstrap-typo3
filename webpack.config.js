@@ -255,14 +255,14 @@ module.exports = (env, argv) => {
                     ],
                 },
 
-                // fonts loader
+                // fonts loader @dont work
                 {
                     test: /\.(woff|woff2|eot|ttf|otf)$/,
                     use: [
                         {
                             loader: "file-loader",
                             options: {
-                                name: "./fonts/[name].[ext]",
+                                name: "fonts/[name].[ext]"
                             }
                         },
                     ],

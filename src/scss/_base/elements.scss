@@ -1,4 +1,12 @@
-
+a{
+    text-decoration: underline;
+    font-weight: 500;
+    color: $brand-red;
+    &:hover{
+        color: $brand-red-dark;
+        text-decoration: none;
+    }
+}
 
 .list-normal{
     list-style: none;
@@ -51,4 +59,12 @@
 
 .text-uppercase{
     text-transform: uppercase;
+}
+
+.social-links{
+    a{
+        text-decoration: none;
+        color: $brand-gray-dark;
+        font-size: 28px;
+    }
 }
