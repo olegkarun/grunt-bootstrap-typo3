@@ -92,9 +92,11 @@ $font-size-lg:                rem(24px);
 $font-size-sm:                rem(14px);
 
 $font-weight-lighter:         lighter !default;
-$font-weight-light:           300;
-$font-weight-normal:          400;
-$font-weight-bold:            600;
+
+$font-weight-light:           200; //DIN Pro Light
+$font-weight-normal:          300; // DIN Pro Regular
+$font-weight-bold:            700; // DIN Pro Medium
+
 $font-weight-bolder:          bolder;
 
 $font-weight-base:            $font-weight-light;
