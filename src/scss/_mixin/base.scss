@@ -10,12 +10,9 @@
 }
 
 @mixin smallcapital($color: $brand-red) {
-    position: absolute;
-    top: 0;
-    bottom: 0; 
-    left: 0;
-    right: 0;
-    z-index: $z-index;
-    width: auto;
-    height: auto;
+    letter-spacing: 0.3px;
+    color: $brand-red;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600; // DIN Pro Medium
 }

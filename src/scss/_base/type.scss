@@ -26,3 +26,7 @@ hr{
     border-top-color: $gray-200;
     margin: 40px 0 40px 0; 
 }
+
+.above-header{
+    @include smallcapital($brand-red);
+}

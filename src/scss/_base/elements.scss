@@ -38,7 +38,7 @@
 
             @include svgicons(theme-color("primary"), 'list-check');
             background-size: 20px;
-            background-position: center 60%;
+            background-position: center 57%;
         }
     }
 
@@ -47,4 +47,8 @@
         margin-top: 1rem;
         margin-bottom: 0.5rem;
     }
+}
+
+.text-uppercase{
+    text-transform: uppercase;
 }

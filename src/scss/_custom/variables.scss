@@ -43,6 +43,40 @@ $link-hover-decoration:                   underline !default;
 $paragraph-margin-bottom:   $spacer * 2;
 
 
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-lg:              1.5;
+$line-height-sm:              1.5;
+
+$border-width:                2px; //forms
+$border-color:                $brand-gray; //forms
+
+$border-radius:               6px;
+$border-radius-lg:            6px;
+$border-radius-sm:            6px;
+
+$rounded-pill:                50rem !default;
+
+$box-shadow-sm:               none;
+$box-shadow:                  none;
+$box-shadow-lg:               none;
+
+$component-active-color:      $white;
+$component-active-bg:         theme-color("primary");
+
+$caret-width:                 1.375em; //22px selectbox caret
+$caret-vertical-align:        $caret-width * .85;
+$caret-spacing:               $caret-width * .85;
+
+$transition-base:             all .2s ease-in-out !default;
+$transition-fade:             opacity .15s linear !default;
+$transition-collapse:         height .35s ease !default;
+
+
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
@@ -54,14 +88,13 @@ $font-family-base:            $font-family-sans-serif;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              rem(18px);
-
-$font-size-lg:                $font-size-base * 1.25;
-$font-size-sm:                $font-size-base * .875;
+$font-size-lg:                rem(24px);
+$font-size-sm:                rem(14px);
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300;
 $font-weight-normal:          400;
-$font-weight-bold:            700;
+$font-weight-bold:            600;
 $font-weight-bolder:          bolder;
 
 $font-weight-base:            $font-weight-normal;
@@ -152,3 +185,6 @@ $container-max-widths: (
 $grid-columns:                12;
 $grid-gutter-width:           40px;
 $grid-row-columns:            6;
+
+
+@import "controls";

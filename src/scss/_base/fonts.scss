@@ -1,11 +1,5 @@
-@include font-face("DIN Pro", '../../src/fonts/DINPro', 400, normal);
-@include font-face("DIN Pro", '../../src/fonts/DINPro', 500, normal);
-
-@include font-face("DIN Pro", '../../src/fonts/DINPro-Light', 300, normal);
-
-@include font-face("DIN Pro", '../../src/fonts/DINPro-Bold', 700, normal);
-@include font-face("DIN Pro", '../../src/fonts/DINPro-Bold', bold, normal);
-
-
-
+@include font-face("DIN Pro", '../../src/fonts/DINPro');
+@include font-face("DIN Pro", '../../src/fonts/DINPro-Light',300);
+//@include font-face("DIN Pro", '../../src/fonts/DINPro-Bold',800);
 // more fonts could be added from folder ../src/font sby request...//
+//@include font-face("DIN Pro", '../../src/fonts/DINPro-Italic', 400, italic);

@@ -4,6 +4,7 @@ $btn-icon-gutter: 10px;
 .btn-link{
     color: $body-color;
     padding: 0;
+    border:0;
     stroke: $body-color;
 
     @include hover() {
@@ -15,6 +16,26 @@ $btn-icon-gutter: 10px;
         }
     }
 }
+
+@each $color, $value in $theme-colors {
+    .btn-link-#{$color} {
+        color: $value;
+        stroke: $value;
+        padding: 0;
+        border:0;
+        svg{
+            stroke: $value;
+        }
+        @include hover() {
+            color: $value;
+            svg{
+                stroke: $value;
+            }
+        }
+    } 
+}
+
+
 
 //outline buttons modification
 @each $color, $value in $theme-colors {
@@ -63,9 +84,14 @@ $btn-icon-gutter: 10px;
     display: inline-flex;
     align-items: center;
     svg{
-        max-height: 20px;
         @include transition(all 0.15s ease-in-out, left 0.15s ease-in-out, right 0.15s ease-in-out); //check $btn-transition
+        &.icon{
+            margin-left: $btn-icon-gutter;
+        }
     }
+    
+    
+    
     &:focus, &:active{
         outline:0; 
         box-shadow: none;
@@ -73,8 +99,8 @@ $btn-icon-gutter: 10px;
 
     .arrow-right, .arrow-left{
         position: relative;
-        width: 20px;
-        height: 12px
+        width: 22px;
+        height: 16px
     }
 
     .arrow-right{
@@ -90,8 +116,11 @@ $btn-icon-gutter: 10px;
 
     &.btn-lg{
         .arrow-right, .arrow-left{
-            width: 30px;
-            height: 18px;
+            width: 32px;
+            height: 23px;
+        }
+         &.icon{
+            margin-left: $btn-icon-gutter * 1.5;
         }
     }
 
