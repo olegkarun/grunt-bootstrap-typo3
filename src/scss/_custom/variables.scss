@@ -158,11 +158,10 @@ $list-inline-padding:         .5rem;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xll: 1440px
+  sm: 768px,
+  md: 992px,
+  lg: 1280px,
+  xl: 1480px
 );
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -175,10 +174,9 @@ $grid-breakpoints: (
 
 $container-max-widths: (
   sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1200px,
-  xll: 1400px
+  md: 960px,
+  lg: 1240px,
+  xl: 1440px
 );
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
