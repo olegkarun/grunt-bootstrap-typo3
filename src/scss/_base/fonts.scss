@@ -1,5 +1,50 @@
-@include font-face("DIN Pro", '../../src/fonts/DINPro');
-@include font-face("DIN Pro", '../../src/fonts/DINPro-Light',300);
-//@include font-face("DIN Pro", '../../src/fonts/DINPro-Bold',800);
-// more fonts could be added from folder ../src/font sby request...//
-//@include font-face("DIN Pro", '../../src/fonts/DINPro-Italic', 400, italic);
+/*#https://www.webtype.com/info/articles/fonts-weights/*/
+@include font-face("DIN Pro", '../../src/fonts/DINPro', normal, normal);
+@include font-face("DIN Pro", '../../src/fonts/DINPro-Light',300, normal);
+@include font-face("DIN Pro", '../../src/fonts/DINPro-Medium',500, normal);
+
+
+/*
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('DINPro.eot');
+    src: local('DIN Pro'), local('DINPro'),
+        url('DINPro.eot?#iefix') format('embedded-opentype'),
+        url('DINPro.woff2') format('woff2'),
+        url('DINPro.woff') format('woff'),
+        url('DINPro.ttf') format('truetype'),
+        url('DINPro.svg#DINPro') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('DINPro-Light.eot');
+    src: local('DIN Pro Light'), local('DINPro-Light'),
+        url('DINPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('DINPro-Light.woff2') format('woff2'),
+        url('DINPro-Light.woff') format('woff'),
+        url('DINPro-Light.ttf') format('truetype'),
+        url('DINPro-Light.svg#DINPro-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('DINPro-Medium.eot');
+    src: local('DIN Pro Medium'), local('DINPro-Medium'),
+        url('DINPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('DINPro-Medium.woff2') format('woff2'),
+        url('DINPro-Medium.woff') format('woff'),
+        url('DINPro-Medium.ttf') format('truetype'),
+        url('DINPro-Medium.svg#DINPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+*/

@@ -68,3 +68,14 @@ a{
         font-size: 28px;
     }
 }
+
+/* #images # */
+.bg-img, .video-js{
+    border-radius: $border-radius;
+}
+
+//use as video mask for border radius 
+.video-js{
+    overflow: hidden;
+    border-radius: $border-radius;
+}

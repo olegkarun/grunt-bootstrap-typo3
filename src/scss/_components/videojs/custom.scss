@@ -1,36 +1,45 @@
 
 //** CUSTOM CODE **/
-.custom-video{
-
+.video-js{
+    // Allow people that hate their poster image to center the big play button.
     .vjs-big-play-button {
+        top: 50%;
+        left: 50%;
+        margin-top: -($big-play-button--height / 2);
+        margin-left: -($big-play-button--width / 2);
+
         background-color: transparent;
-        width: 90px;
-        height: 90px;
-        background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='89' height='88' viewBox='0 0 89 88' fill='#{$white}'%3E%3Cg%3E%3Cg%3E%3Cpath d='M44.535.074c24.247 0 43.903 19.657 43.903 43.904 0 24.247-19.656 43.903-43.903 43.903S.632 68.225.632 43.978 20.288.074 44.535.074zm15.852 44.991l-.145-.093L36 29.432v31.266z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"));
+        border-radius: 50%;
 
-        background-repeat: no-repeat;
-        background-size: 90px;
-        background-position: center;
-        border: none !important; // @stylint ignore
-        box-shadow: none !important; // @stylint ignore
-        opacity: .8;
-
+        //hide default icon
         .vjs-icon-placeholder:before{
             content: "";
             display: none;
         } 
+
         &:before {
             content: "";
-            display: none;
+            width: 26px;
+            height: 44px;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-30%, -50%);
+            @include svgicons($white, 'play-video'); 
         }
-        &:hover {
+
+
+    }
+
+    &:hover {
+        .vjs-big-play-button {
             background-color: transparent;
-            opacity: 1;
+            opacity: 0.8;
+            border-color: theme-color("primary"); 
+            &:before {
+               @include svgicons(theme-color("primary"), 'play-video');  
+            }
         }
     }
 
-    .video-js:hover .vjs-big-play-button, .video-js .vjs-big-play-button:focus{
-        background-color:transparent;
-        opacity: 1;
-    }
 }

@@ -7,7 +7,7 @@ $btn-icon-gutter: 10px;
     border:0;
     stroke: $body-color;
 
-    @include hover() {
+    &:hover, &:active{
         text-decoration: none;
         color: $body-color;
         svg{
@@ -26,7 +26,7 @@ $btn-icon-gutter: 10px;
         svg{
             stroke: $value;
         }
-        @include hover() {
+        &:hover, &:active{
             color: $value;
             svg{
                 stroke: $value;
@@ -43,7 +43,7 @@ $btn-icon-gutter: 10px;
         svg{
             stroke: $value;
         }
-        @include hover() {
+        &:hover, &:active{
             svg{
                 stroke: color-yiq($value);
             }
@@ -57,7 +57,7 @@ $btn-icon-gutter: 10px;
         svg{
             stroke: color-yiq($value);
         }
-        @include hover() {
+        &:hover, &:active{
             svg{
                 stroke: color-yiq($value);
             }
@@ -66,21 +66,26 @@ $btn-icon-gutter: 10px;
 }
 
 .btn-primary{
-    @include hover(){
+    &:hover, &:active{
         background: $brand-red-dark;
     }
 }
 
 .btn-secondary{
-    @include hover(){
+    &:hover, &:active{
         background: $brand-gray;
     }
+}
+
+.btn-secondary-outline{
+    color: $body-color;
 }
 
 
 //buton icon logic
 
 .btn{
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
     svg{
@@ -125,7 +130,7 @@ $btn-icon-gutter: 10px;
     }
 
     //animation
-    @include hover(){
+    &:hover, &:active{
         .arrow-right{
             right: - $btn-icon-gutter/2;
         }

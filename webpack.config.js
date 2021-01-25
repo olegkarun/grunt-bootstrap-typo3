@@ -87,8 +87,9 @@ module.exports = (env, argv) => {
         mode: isDevMode ? 'development' : 'production',
 
         stats: {
-            warnings: false
+            warnings:false
         },
+        
 
         performance: {
             hints: false,

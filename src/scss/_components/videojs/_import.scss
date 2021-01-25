@@ -1,3 +1,26 @@
+$center-big-play-button: true;
+// Text, icons, hover states
+$primary-foreground-color: #fff !default;
+
+// Control backgrounds (control bar, big play, menus)
+$primary-background-color: #2B333F !default;
+$primary-background-transparency: 0.7 !default;
+
+// Hover states, slider backgrounds
+$secondary-background-color: lighten($primary-background-color, 33%) !default;
+$secondary-background-transparency: 0.5 !default;
+
+// Avoiding helvetica: issue #376
+$text-font-family: Arial, Helvetica, sans-serif !default;
+
+// Using the '--' naming for component-specific styles
+$big-play-button--border-size: 3px;
+$big-play-button--width: 100px;
+$big-play-button--line-height: 1.5em;
+$big-play-button--height: 100px;
+$big-play-button--transparency: 1;
+
+
 @import "~video.js/src/css/variables";
 @import "~video.js/src/css/private-variables";
 @import "~video.js/src/css/utilities";
@@ -66,4 +89,4 @@
   background: none;
 }
 
-//@import "custom";
+@import "custom";
