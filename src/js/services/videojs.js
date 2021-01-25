@@ -11,3 +11,5 @@
 /* https://docs.videojs.com/tutorial-setup.html */
 
 import videojs from 'video.js';
+videojs.options.fluid = true;
+ 

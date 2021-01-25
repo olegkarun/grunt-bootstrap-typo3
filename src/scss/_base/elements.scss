@@ -11,12 +11,18 @@ a{
 .list-normal{
     list-style: none;
     position: relative;
+    padding-left: 25px;
     & > li{
+        position: relative;
         &::before {
-            content: '-';
+            content: '';
             position: absolute;
-            left: 1rem;
-        }
+            left: -25px;
+            width: 14px;
+            height: 12px;
+            top:6px;
+            @include svgicons(theme-color("primary"), 'list-check');            
+        } 
     }
     ul{
         margin-top: 0.5rem;
