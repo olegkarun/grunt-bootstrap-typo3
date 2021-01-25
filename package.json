@@ -16,7 +16,6 @@
     "prod": "webpack --mode=production --progress --devtool=hidden-source-map",
     "clear": "del-cli dist"
   },
-  
   "dependencies": {
     "animate.css": "^4.1.1",
     "aos": "^3.0.0-beta.6",
@@ -54,8 +53,9 @@
     "svg-transform-loader": "^2.0.13",
     "svgo-loader": "^2.2.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.1",
     "webpack": "^5.13.0",
-    "webpack-cli": "^4.3.1",
+    "webpack-cli": "^4.4.0",
     "webpack-dev-server": "^3.11.1",
     "webpack-exclude-entry": "^1.0.1",
     "webpack-remove-empty-scripts": "^0.7.1"

@@ -4,10 +4,6 @@
 
 //custom bootstrap variables
 
-$navbar-padding-x: 20px;
-$navbar-brand-padding-y: 0;
-$nav-link-padding-y: 0;
-$nav-link-padding-x: $spacer * .875;
 
 // Spacing
 //
@@ -98,13 +94,16 @@ $font-size-sm:                rem(14px);
 $font-size-xs:                rem(13px);
 
 $font-weight-lighter:         lighter !default;
-$font-weight-light:           300;
-$font-weight-normal:          400;
-$font-weight-medium:          500;
-$font-weight-bold:            600;
+
+$font-weight-light:           300; //DIN Pro Light
+$font-weight-normal:          400; // DIN Pro Regular
+$font-weight-bold:            500; // DIN Pro Medium
+
+$font-weight-medium:          $font-weight-normal; // use in nav header
+
 $font-weight-bolder:          bolder;
 
-$font-weight-base:            $font-weight-normal;
+$font-weight-base:            $font-weight-light;
 $line-height-base:            1.5;
 
 $h1-font-size:                rem(56px);
@@ -117,7 +116,7 @@ $h6-font-size:                $font-size-base;
 $headings-margin-bottom:      $spacer * 1.5;
 
 $headings-font-family:        null;
-$headings-font-weight:        400;
+$headings-font-weight:        500;
 $headings-line-height:        1.2;
 $headings-color:              null;
 
@@ -195,3 +194,29 @@ $grid-row-columns:            6;
 
 
 @import "controls";
+
+// Navs
+
+$nav-link-padding-y:                .5rem;
+$nav-link-padding-x:                $spacer * .875;
+$nav-link-disabled-color:           $gray-600 !default;
+
+
+
+// Navbar
+
+$navbar-padding-y:                  $spacer / 2 !default;
+$navbar-padding-x:                  20px;
+
+$navbar-nav-link-padding-x:         .5rem !default;
+
+$navbar-brand-font-size:            $font-size-lg !default;
+// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+$nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
+$navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
+$navbar-brand-padding-y:            0;
+
+$navbar-toggler-padding-y:          .25rem !default;
+$navbar-toggler-padding-x:          .75rem !default;
+$navbar-toggler-font-size:          $font-size-lg !default;
+$navbar-toggler-border-radius:      $btn-border-radius !default;

@@ -1,0 +1,46 @@
+
+//** CUSTOM CODE **/
+.video-js{
+    // Allow people that hate their poster image to center the big play button.
+    .vjs-big-play-button {
+        top: 50%;
+        left: 50%;
+        margin-top: -($big-play-button--height / 2);
+        margin-left: -($big-play-button--width / 2);
+
+        background-color: transparent;
+        border-radius: 50%;
+        @include transition(border-color 0.15s ease-in-out);
+
+        //hide default icon
+        .vjs-icon-placeholder:before{
+            content: "";
+            display: none;
+        } 
+
+        &:before {
+            content: "";
+            width: 26px;
+            height: 44px;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-30%, -50%);
+            @include svgicons($white, 'play-video'); 
+        }
+
+
+    }
+
+    &:hover {
+        .vjs-big-play-button {
+            background-color: transparent;
+            opacity: 0.8;
+            //border-color: theme-color("primary"); 
+            //&:before {
+            //   @include svgicons(theme-color("primary"), 'play-video');  
+            //}
+        }
+    }
+
+}

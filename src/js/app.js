@@ -18,6 +18,7 @@ const cssBreakpoints = {sm: '992', md:'1200'}; //should be same breakpoint boots
 import svginject from './services/svginject.js';
 import AOSInitFunction from './services/aos.js';  
 import './services/lazysizes.js'; 
+import './services/videojs.js'; 
 
 svginject(projectPath+'/img/icons.svg'); 
 AOSInitFunction(cssBreakpoints);

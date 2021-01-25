@@ -87,8 +87,9 @@ module.exports = (env, argv) => {
         mode: isDevMode ? 'development' : 'production',
 
         stats: {
-            warnings: false
+            warnings:false
         },
+        
 
         performance: {
             hints: false,
@@ -258,7 +259,7 @@ module.exports = (env, argv) => {
                     ],
                 },
 
-                // fonts loader
+                // fonts loader @dont work
                 {
                     test: /\.(woff|woff2|eot|ttf|otf)$/,
                     use: [
@@ -269,7 +270,7 @@ module.exports = (env, argv) => {
                                 outputPath: "./fonts/",
                                 emitFile: true,
                                 esModule: false
-                            }
+                           }
                         },
                     ],
                 },
