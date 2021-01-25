@@ -27,14 +27,302 @@
         <meta property="og:description" content=""/>
         <meta property="og:locale" content="en_US">
 
-        <link href="dist/css/app.build.css" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="page-home">
         <div class="site-wrapper">
 
-            <header>
-
+            <header id="header" class="header header-home">
+              <nav id="navbar" class="container navbar navbar-expand-lg">
+                  <a class="navbar-brand" href="#">
+                    <svg class="navbar-logo">
+                      <use xlink:href="#wtg-logo"/>
+                    </svg>
+                    <svg class="navbar-logo navbar-logo-home">
+                      <use xlink:href="#wtg-logo-home"/>
+                    </svg>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse navbar-content" id="navbarNavDropdown">
+                    <ul class="topbar">
+                      <li class="topbar-item">
+                        <a href="" class="topbar-link">Newsletter</a>
+                      </li>
+                      <li class="topbar-item">
+                        <a href="" class="topbar-link">Contact</a>
+                      </li>
+                      <li class="topbar-item dropdown">
+                        <a href="" class="topbar-link dropdown-toggle" id="topbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Deutsch</a>
+                        <div class="dropdown-menu" aria-labelledby="topbarDropdownMenuLink">
+                          <a class="dropdown-item" href="#">Englisch</a>
+                          <a class="dropdown-item" href="#">Russisch</a>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link nav-link-current" href="#homeMenu" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="homeMenu">Home <span class="sr-only">(current)</span></a>
+                        <div class="collapse nav-menu" id="homeMenu" data-parent=".header">
+                          <div class="container">
+                            <div class="nav-menu-top">
+                              <a class="btn btn-lg btn-link-primary nav-menu-heading">
+                                Lösungen
+                                <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg>
+                              </a>
+                              <a class="nav-menu-close" href="#homeMenu" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="homeMenu">
+                                schliessen
+                              </a>
+                            </div>
+                            <div class="nav-menu-content">
+                              <div class="nav-menu-col">
+                                <div class="nav-menu-section">
+                                  <a class="btn btn-lg btn-link-dark nav-menu-subheading">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                    <div class="nav-menu-subsection">
+                                      <span class="nav-menu-type nav-menu-type-no-subpage">Contact Center</span>
+                                      <ul class="nav-menu-list">
+                                        <li class="nav-menu-list-item">
+                                          <a href="" class="nav-menu-link">Video</a>
+                                        </li>
+                                        <li class="nav-menu-list-item">
+                                          <a href="" class="nav-menu-link">Voice <span class="nav-menu-link-badge">Neu</span></a>
+                                        </li>
+                                        <li class="nav-menu-list-item">
+                                          <a href="" class="nav-menu-link">UC</a>
+                                        </li>
+                                        <li class="nav-menu-list-item">
+                                          <a href="" class="nav-menu-link">Conferencing</a>
+                                        </li>
+                                        <li class="nav-menu-list-item">
+                                          <a href="" class="nav-menu-link">Collaboration</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="nav-menu-subsection">
+                                      <span class="nav-menu-type nav-menu-type-no-subpage">Contact Center</span>
+                                      <ul class="nav-menu-list">
+                                        <li class="nav-menu-list-item">
+                                          <a href="" class="nav-menu-link">Video</a>
+                                        </li>
+                                        <li class="nav-menu-list-item">
+                                          <a href="" class="nav-menu-link">Voice <span class="nav-menu-link-badge">Neu</span></a>
+                                        </li>
+                                        <li class="nav-menu-list-item">
+                                          <a href="" class="nav-menu-link">UC</a>
+                                        </li>
+                                        <li class="nav-menu-list-item">
+                                          <a href="" class="nav-menu-link nav-menu-link-current">Conferencing</a>
+                                        </li>
+                                        <li class="nav-menu-list-item">
+                                          <a href="" class="nav-menu-link">Collaboration</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="nav-menu-col">
+                                <div class="nav-menu-section">
+                                  <a class="btn btn-lg btn-link-dark nav-menu-subheading">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                  <div class="nav-menu-subsection">
+                                    <span class="nav-menu-type nav-menu-type-no-subpage">Contact Center</span>
+                                    <ul class="nav-menu-list">
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Video</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Voice <span class="nav-menu-link-badge">Neu</span></a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">UC</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Conferencing</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Collaboration</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="nav-menu-subsection">
+                                    <span class="nav-menu-type nav-menu-type-no-subpage">Contact Center</span>
+                                    <ul class="nav-menu-list">
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Video</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Voice <span class="nav-menu-link-badge">Neu</span></a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">UC</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Conferencing</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Collaboration</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nav-menu-col">
+                                <div class="nav-menu-section">
+                                  <a class="btn btn-lg btn-link-dark nav-menu-subheading">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                  <div class="nav-menu-subsection">
+                                    <span class="nav-menu-type nav-menu-type-no-subpage">Contact Center</span>
+                                    <ul class="nav-menu-list">
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Video</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Voice <span class="nav-menu-link-badge">Neu</span></a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">UC</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Conferencing</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Collaboration</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="nav-menu-subsection">
+                                    <span class="nav-menu-type nav-menu-type-no-subpage">Contact Center</span>
+                                    <ul class="nav-menu-list">
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Video</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Voice <span class="nav-menu-link-badge">Neu</span></a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">UC</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Conferencing</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Collaboration</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#featuresMenu" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="featuresMenu">Features</a>
+                        <div class="collapse nav-menu" id="featuresMenu" data-parent=".header">
+                          <div class="container">
+                            <div class="nav-menu-top">
+                              <a class="btn btn-lg btn-link-primary nav-menu-heading">
+                                Lösungen
+                                <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg>
+                              </a>
+                              <a class="nav-menu-close" href="#featuresMenu" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="featuresMenu">
+                                schliessen
+                              </a>
+                            </div>
+                            <div class="nav-menu-content">
+                              <div class="nav-menu-col">
+                                <div class="nav-menu-section">
+                                  <a class="btn btn-lg btn-link-dark nav-menu-subheading">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                  <div class="nav-menu-subsection">
+                                    <span class="nav-menu-type nav-menu-type-no-subpage">Contact Center</span>
+                                    <ul class="nav-menu-list">
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Video</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Voice <span class="nav-menu-link-badge">Neu</span></a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">UC</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Conferencing</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Collaboration</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="nav-menu-subsection">
+                                    <span class="nav-menu-type nav-menu-type-no-subpage">Contact Center</span>
+                                    <ul class="nav-menu-list">
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link nav-menu-link-current">Video</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Voice <span class="nav-menu-link-badge">Neu</span></a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">UC</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Conferencing</a>
+                                      </li>
+                                      <li class="nav-menu-list-item">
+                                        <a href="" class="nav-menu-link">Collaboration</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nav-menu-col">
+                                <div class="nav-menu-section">
+                                  <a class="btn btn-lg btn-link-dark nav-menu-subheading">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                    <div class="nav-menu-subsection">
+                                      <span class="nav-menu-type">Contact Center</span>
+                                    </div>
+                                    <div class="nav-menu-subsection">
+                                      <span class="nav-menu-type">Contact Center</span>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="nav-menu-col">
+                                <div class="nav-menu-section">
+                                  <span class="btn btn-lg btn-link-dark nav-menu-subheading nav-menu-subheading-no-subpage">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></span>
+                                    <div class="nav-menu-subsection">
+                                      <a class="nav-menu-type">Contact Center</a>
+                                    </div>
+                                    <div class="nav-menu-subsection">
+                                      <a class="nav-menu-type">Contact Center</a>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                      </li>
+                      <li class="nav-item">
+                        <button class="btn nav-search">
+                          <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+              </nav>
             </header>
 
             <main>
@@ -361,6 +649,5 @@
 
 
         <div id="svg-icons"></div>
-        <script defer src="dist/js/app.js"></script>
     </body>
 </html>
