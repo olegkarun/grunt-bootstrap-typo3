@@ -30,3 +30,9 @@ hr{
 .above-header{
     @include smallcapital($brand-red);
 }
+
+.lead{
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.33px;
+}
