@@ -7,7 +7,7 @@ $btn-icon-gutter: 10px;
     border:0;
     stroke: $body-color;
 
-    &:hover, &:active{
+    &:hover, &:active, {
         text-decoration: none;
         color: $body-color;
         svg{
@@ -89,15 +89,15 @@ $btn-icon-gutter: 10px;
     display: inline-flex;
     align-items: center;
     svg{
-        @include transition(all 0.15s ease-in-out, left 0.15s ease-in-out, right 0.15s ease-in-out); //check $btn-transition
+        @include transition(stroke 0.15s ease-in-out, left 0.15s ease-in-out, right 0.15s ease-in-out); //check $btn-transition
         &.icon{
             margin-left: $btn-icon-gutter;
         }
     }
-    
-    
-    
-    &:focus, &:active{
+
+    &:focus, &:active, &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active,
+        .show > &.dropdown-toggle {
         outline:0; 
         box-shadow: none;
     }   
@@ -124,7 +124,7 @@ $btn-icon-gutter: 10px;
             width: 32px;
             height: 23px;
         }
-         &.icon{
+        &.icon{
             margin-left: $btn-icon-gutter * 1.5;
         }
     }

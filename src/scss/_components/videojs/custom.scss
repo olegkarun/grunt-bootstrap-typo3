@@ -10,6 +10,7 @@
 
         background-color: transparent;
         border-radius: 50%;
+        @include transition(border-color 0.15s ease-in-out);
 
         //hide default icon
         .vjs-icon-placeholder:before{
@@ -35,10 +36,10 @@
         .vjs-big-play-button {
             background-color: transparent;
             opacity: 0.8;
-            border-color: theme-color("primary"); 
-            &:before {
-               @include svgicons(theme-color("primary"), 'play-video');  
-            }
+            //border-color: theme-color("primary"); 
+            //&:before {
+            //   @include svgicons(theme-color("primary"), 'play-video');  
+            //}
         }
     }
 
