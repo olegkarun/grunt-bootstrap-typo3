@@ -7,6 +7,8 @@ import {testArrowFunction, testFunctionDeclaration} from "./modules/example.js"
 /** import of default export */
 import testDefaultFunction from "./modules/example.js"
 
+import "./modules/header";
+
 const projectPath = '/dist'; //after integration will be typo3conf/ext/theme/Resporces/Public
 const cssBreakpoints = {sm: '992', md:'1200'}; //should be same breakpoint bootstrap/variable
 

@@ -32,7 +32,7 @@ module.exports = (env, argv) => {
             // translates CSS into CommonJS modules
             loader: 'css-loader',
             options: {
-                url: false,
+                url: true,
                 sourceMap: true
             },
         },
@@ -102,7 +102,7 @@ module.exports = (env, argv) => {
         // development server with hot-reload
         devServer: {
             // if not set use from output settings
-            publicPath: '/dist',
+            publicPath: '/dist/',
             watchContentBase: true,
             compress: true,
             hot: true,
@@ -120,7 +120,7 @@ module.exports = (env, argv) => {
             // base build directory
             path: path.resolve(__dirname, "dist"),
             // path to build relative asset links
-            publicPath: "/dist"
+            publicPath: "/dist/"
                     // works with html-plugin for prefix resources path ?
         },
 
@@ -136,7 +136,7 @@ module.exports = (env, argv) => {
 
             new HtmlWebpackPlugin({
                 filename: 'index.html',
-                template: '../src/index.ejs',
+                template: '../index.html',
                 title: "Project Name",
                 inject: "body",
                 excludeChunks: ['svg']    // also we need to get rid of the injected svg.js in the index.html file
@@ -232,7 +232,10 @@ module.exports = (env, argv) => {
                         {
                             loader: "file-loader",
                             options: {
-                                name: "img/[name].[ext]"
+                                name: "[name].[ext]",
+                                outputPath: "./img/",
+                                emitFile: true,
+                                esModule: false
                             }
                         },
                         {
@@ -262,7 +265,10 @@ module.exports = (env, argv) => {
                         {
                             loader: "file-loader",
                             options: {
-                                name: "./fonts/[name].[ext]",
+                                name: "[name].[ext]",
+                                outputPath: "./fonts/",
+                                emitFile: true,
+                                esModule: false
                             }
                         },
                     ],
