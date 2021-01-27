@@ -11,6 +11,8 @@
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
+$header-height-sm: 94px;
+
 $spacer: 1rem;
 $spacers: () !default;
 $spacers: map-merge(

@@ -1,5 +1,11 @@
 $btn-icon-gutter: 10px;
 
+button{
+    &:hover, &:active, &:focus{
+        outline: 0;
+    }
+}
+s
 //custom type of button
 .btn-link{
     color: $body-color;

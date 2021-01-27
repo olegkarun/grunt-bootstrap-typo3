@@ -1,0 +1,50 @@
+.website-stage{
+    position:relative;
+    .image-container{
+        position:relative;
+        z-index: 5;
+        height: 650px;
+        max-width: 1920px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        
+        .bg-image{
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        } 
+
+        //@todo make mixin for all bg images
+
+        &:before, &:after{
+            content: '';
+            display: block;
+            height: 100%;
+            width: 20%;
+            position: absolute;
+            z-index: 6;
+            top:0;
+
+        }
+
+        &:before{
+            left:0;
+            background-image: linear-gradient(to right, $brand-gray-light 0%, rgba($brand-gray-light, 0) 100%);
+        }
+
+        &:after{
+            right:0;
+            background-image: linear-gradient(to left, $brand-gray-light 0%, rgba($brand-gray-light, 0) 100%);
+        }
+    }
+
+    &:before{
+        content:'';
+        @include overlay(1);
+        background-color: rgba($brand-gray-light, 1); 
+    }
+
+
+}
