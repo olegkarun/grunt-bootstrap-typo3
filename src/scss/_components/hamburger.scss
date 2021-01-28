@@ -38,11 +38,11 @@ $hamburger-color: $white;
       display: none;
     }
 
-    @include hover() {
-      span {
-        background-color: $brand-red;
-      }
-    }
+    //@include hover() {
+    //  span {
+    //    background-color: $brand-red;
+    //  }
+    //}
 
     span {
       display: block;

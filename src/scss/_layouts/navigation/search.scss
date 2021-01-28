@@ -6,10 +6,11 @@
             @include media-breakpoint-down(md) {
                 display: none;
             }
-            
             &-mobile {
                 margin-left: auto;
-                display: block;
+                display: flex;
+                align-items: center;
+                height: 32px; 
 
                 @include media-breakpoint-up(lg) {
                     display: none;

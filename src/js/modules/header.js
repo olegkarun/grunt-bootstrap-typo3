@@ -1,6 +1,6 @@
 export default (() => {
   const body = $("body");
-  const siteWrapper = $(".site-wrapper");
+  const siteWrapper = $(".website-wrapper");
   const header = $("#header .header");
   const navbar = $("#navbar .navbar"); 
   const navbarContent = navbar.find("#mainNav");
