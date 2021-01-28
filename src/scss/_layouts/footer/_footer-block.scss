@@ -1,0 +1,14 @@
+.footer-block {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $brand-gray;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 35px;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,10 @@
+.footer-logo {
+  max-width: 240px;
+  max-height: 63px;
+
+  @include media-breakpoint-down(sm) {
+    max-width: 285px;
+    max-height: 84px;
+    margin-bottom: 35px;
+  }
+}
