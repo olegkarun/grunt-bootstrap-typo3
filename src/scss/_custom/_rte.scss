@@ -30,7 +30,8 @@
     @include rte-link-arrow($body-color);
     @extend .btn;
     @extend .btn-link;
-}
+    @extend .btn-link-dark;
+} 
 
 .btn-rte{ 
     

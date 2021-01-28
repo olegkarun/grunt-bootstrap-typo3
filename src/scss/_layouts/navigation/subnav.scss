@@ -1,0 +1,131 @@
+.navbar-nav{  
+    .subnav{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: block;
+
+        &-item{
+            display: block;
+        }
+        //if link
+        a{
+            color: $black;
+            svg{
+                stroke: $black;
+            }
+        }
+        //if no link
+        span{
+            color: $brand-gray;
+            svg{
+                stroke: $brand-gray;
+            }
+        } 
+
+        &-link{
+            letter-spacing: 0.33px;
+            font-size: 1rem;
+            transition: color 0.15s ease;
+            text-decoration: none;
+            font-weight: $font-weight-bold;
+            text-decoration:none;
+
+            @include hover-focus{
+                text-decoration: none;
+                color: $brand-red-dark;
+                svg{
+                    stroke: $brand-red-dark;
+                }
+            }
+            //modificators
+            &.active{
+                color: $brand-red;
+                svg{
+                    stroke: $brand-red;
+                }
+            }
+            &.new{
+                display:flex;
+                align-items: center;
+                .icon-budget-new{
+                    margin-left: 0.5rem;
+                    stroke: $brand-red;
+                }
+
+            }
+        }
+
+        //additional custom styles for links by level
+        &.first-level{ 
+            margin-bottom: $navigation-spacer;
+
+            & > li {
+                > .nav-controls{
+                    margin-bottom:$navigation-spacer;
+
+                    //if link
+                    >  a{
+                        //add color to svg and text
+                        @extend .btn;
+                        @extend .btn-link-dark;
+
+                        @include hover-focus{
+                            color: $brand-red-dark;
+                            svg{
+                                stroke: $brand-red-dark;
+                            }
+                        } 
+                    }
+
+                    //if no link
+                    > span{ 
+                        svg{
+                            display: none;
+                        }
+                        color: $brand-gray;
+                        //override btn styles
+                        @include hover-focus-active{
+                            cursor: default;
+                            color: $brand-gray;
+                        }
+                    }
+
+                    > .subnav-link{
+                        padding: 0;
+                        font-size: 22px;
+                        font-weight: $font-weight-bold;
+                        letter-spacing: 0.33px;
+                        svg{
+                            stroke-width: 2px;
+                        }
+                    };
+                }  
+            }
+        }
+
+        &.second-level{
+            .subnav-link{
+                letter-spacing: 0.24px; 
+            }
+            & > li > div {
+                >  .subnav-link{
+                    margin-bottom: 1rem; 
+                }
+                > span.subnav-link{
+                    text-transform: uppercase;
+                    @include hover-focus(){
+                        color: $brand-gray;
+                    }
+                }
+
+            }
+            margin-bottom: $navigation-spacer;
+        }
+
+        &.third-level{
+            padding-left: 10px;
+            margin-bottom: $navigation-spacer;
+        }
+    }
+}

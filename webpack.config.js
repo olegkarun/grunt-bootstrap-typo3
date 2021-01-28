@@ -76,7 +76,7 @@ module.exports = (env, argv) => {
 
     if (!isDevMode) {
       cssLoaders.splice(2, 0, postCssLoader);
-      entries["rte"] = "./scss/rte.scss";
+      entries["rte"] = "./scss/rte.scss"; 
     }
 
     let config = {

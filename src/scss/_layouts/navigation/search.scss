@@ -1,0 +1,29 @@
+.navbar{
+    .nav{
+        &-search {
+            padding: 0;
+            appearance: none;
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+            
+            &-mobile {
+                margin-left: auto;
+                display: block;
+
+                @include media-breakpoint-up(lg) {
+                    display: none;
+                }
+            }
+            svg {
+                margin-left: 0;
+                fill: $white;
+                transition: fill 0.15s ease;
+
+                @include hover() {
+                    fill: $brand-red;
+                }
+            }
+        }
+    }
+}

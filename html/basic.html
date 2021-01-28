@@ -27,114 +27,375 @@
         <meta property="og:description" content=""/>
         <meta property="og:locale" content="en_US">
 
-        <link href="/dist/css/app.build.css" rel="stylesheet"> 
+        <link href="/dist/css/app.build.css" rel="stylesheet">
 
     </head>
 
     <body>
         <div class="site-wrapper">
 
-            <header id="header">
-                
-                <section class="header"> <!-- header section / header-home - dark / header-active - white -->
+            <header class="website-header home-mode">
 
                     <div id="navbar" class="container">
 
-                        <!-- navbar -->  
+                        <!-- navbar -->
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="#">
-                                <svg class="navbar-logo">
-                                <use xlink:href="#wtg-logo"/>
-                                </svg>
-                                <svg class="navbar-logo navbar-logo-home">
-                                <use xlink:href="#wtg-logo-home"/>
-                                </svg>
+                                <svg class="navbar-logo"><use xlink:href="#wtg-logo"></use></svg>
+                                <svg class="navbar-logo white"><use xlink:href="#wtg-logo-home"></use></svg>
                             </a>
                             <button class="btn nav-search nav-search-mobile">
                                 <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
                             </button>
                             <button class="toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <div class="toggler-open">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                                <svg class="toggler-close">
-                                <use xlink:href="#icon-close-nav">
-                                </svg>
+                                <div class="toggler-open"><span></span><span></span><span></span></div>
+                                <svg class="toggler-close"><use xlink:href="#icon-close-nav"></use></svg>
                             </button>
 
 
                             <div class="collapse navbar-collapse navbar-content" id="mainNav">
-                                <div class="container">
+                                <div class="navbar-content-flexwrap">
 
-                                    <!-- toolbar -->  
-                                    <ul class="topbar">
-                                        <li class="topbar-item">
-                                            <a href="#" class="topbar-link">Newsletter</a>
+                                    <!-- toolbar -->
+                                    <ul class="metanav">
+                                        <li class="metanav-item">
+                                            <a href="#" class="metanav-link">Newsletter</a>
                                         </li>
-                                        <li class="topbar-item">
-                                            <a href="#" class="topbar-link">Contact</a>
+                                        <li class="metanav-item">
+                                            <a href="#" class="metanav-link">Contact</a>
                                         </li>
-                                        <li class="topbar-item dropdown">
-                                            <a href="#" class="topbar-link dropdown-toggle" id="topbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Deutsch</a>
-                                            <div class="dropdown-menu" aria-labelledby="topbarDropdownMenuLink">
+                                        <li class="metanav-item dropdown">
+                                            <a href="#" class="metanav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Deutsch</a>
+                                            <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="#">Englisch</a>
                                                 <a class="dropdown-item" href="#">Russisch</a>
                                             </div>
                                         </li>
                                     </ul>
-                                    <!-- / toolbar -->    
+                                    <!-- / toolbar -->
 
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
                                             <div class="nav-controls">
-                                                <a class="nav-link nav-link-top nav-link-toggler nav-link-current" 
-                                                   href="#m-1" 
-                                                   data-toggle="collapse" 
-                                                   role="button" 
-                                                   aria-expanded="false" 
-                                                   aria-controls="m-1">Home</a>
-                                                <a class="nav-link nav-link-top nav-link-mobile" href="#">
-                                                    Home
-                                                </a>
+                                                <button class="nav-toggler collapsed" data-target="#m-1" data-toggle="collapse" aria-expanded="false" aria-controls="m-1"></button>
+                                                <a class="nav-link" href="#">Root level 1</a>
+                                            </div>
+
+                                            <div class="collapse nav-dropdown" id="m-1" data-parent="#mainNav">
+                                                <div class="nav-container">
+
+                                                    <div class="nav-dropdown-panel">
+                                                        <a class="btn-link">
+                                                            Root level 1<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg>
+                                                        </a>
+                                                        <button class="close" data-target="#m-1" data-toggle="collapse" aria-expanded="false" aria-controls="m-1">schliessen</button>
+                                                    </div>
+
+                                                    <div class="nav-dropdown-content">
+                                                        <ul class="subnav first-level">
+                                                            <li class="subnav-item">
+                                                                <div class="nav-controls">
+                                                                    <button class="nav-toggler collapsed" data-target="#m-1-1" data-toggle="collapse" aria-expanded="false" aria-controls="m-1-1"></button>
+                                                                    <a class="subnav-link" href="#">First level<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                                                </div>
+                                                                <div class="collapse" id="m-1-1">
+                                                                    <ul class="subnav second-level">
+                                                                        <li class="subnav-item">
+                                                                            <div class="nav-controls">
+                                                                                <button class="nav-toggler collapsed" data-target="#m-1-1-1" data-toggle="collapse" aria-expanded="false" aria-controls="m-1-1-1"></button>
+                                                                                <span class="subnav-link">Second Level</span>
+                                                                            </div>
+                                                                            <div class="collapse"  id="m-1-1-1">
+                                                                                <ul class="subnav third-level">
+                                                                                    <li class="subnav-item">
+                                                                                        <a href="" class="subnav-link">Video</a>
+                                                                                    </li>
+                                                                                    <li class="subnav-item">
+                                                                                        <a href="#" class="subnav-link new">Voice <svg class="icon icon-budget-new"><use  xlink:href="#icon-budget-new"></use></svg></a>
+                                                                                    </li>
+                                                                                    <li class="subnav-item">
+                                                                                        <a href="#" class="subnav-link">UC</a>
+                                                                                    </li>
+                                                                                    <li class="subnav-item">
+                                                                                        <a href="#" class="subnav-link active">Active Conferencing</a>
+                                                                                    </li>
+                                                                                    <li class="subnav-item">
+                                                                                        <a href="#" class="subnav-link">Collaboration</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="subnav-item">
+                                                                            <div class="nav-controls">
+                                                                                <a href="#" class="subnav-link">Second Level link 1</a>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="subnav-item">
+                                                                            <div class="nav-controls">
+                                                                                <a href="#" class="subnav-link">Second Level link 2</a>
+                                                                            </div>
+                                                                        </li>                                                                    
+                                                                    </ul>     
+                                                                </div>
+                                                            </li>
+
+                                                            <li class="subnav-item">
+                                                                <div class="nav-controls">
+                                                                    <button class="nav-toggler collapsed" href="#m-1-2" data-toggle="collapse" aria-expanded="false" aria-controls="m-1-2"></button>
+                                                                    <span class="subnav-link">First level <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></span>
+                                                                </div>
+
+                                                                <div class="collapse" id="m-1-2">
+                                                                    <ul class="subnav second-level">
+                                                                        <li class="subnav-item">
+                                                                            <div class="nav-controls">
+                                                                                <a href="#" class="subnav-link">Second Level 2</a>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="subnav-item">
+                                                                            <div class="nav-controls">
+                                                                                <a href="#" class="subnav-link">Second Level 2</a>
+                                                                            </div>
+                                                                        </li>                                                                    
+                                                                    </ul>
+                                                                </div>
+
+                                                            </li>  
+
+                                                            <li class="subnav-item">
+                                                                <div class="nav-controls">
+                                                                    <span class="subnav-link">First level no link<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></span>
+                                                                </div>
+                                                            </li>   
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <div class="nav-controls">
+                                                <button class="nav-toggler collapsed" data-target="#m-2" data-toggle="collapse" aria-expanded="false" aria-controls="m-2"></button>
+                                                <a class="nav-link active" href="#">Root level 2</a>
+                                            </div>
+
+                                            <div class="collapse nav-dropdown" id="m-2" data-parent="#mainNav">
+
+                                                <div class="nav-container">
+
+                                                    <div class="nav-dropdown-panel">
+                                                        <a class="btn-link">
+                                                            Root level 2<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg>
+                                                        </a>
+                                                        <button class="close" data-target="#m-2" data-toggle="collapse" aria-expanded="false" aria-controls="m-2">schliessen</button>
+                                                    </div>
+
+                                                    <div class="nav-dropdown-content simple">
+                                                        <ul class="subnav first-level">
+                                                            <li class="subnav-item">
+                                                                <div class="nav-controls">
+                                                                    <a class="subnav-link" href="#">First simple 2<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="subnav-item">
+                                                                <div class="nav-controls">
+                                                                    <a class="subnav-link" href="#">First simple 3<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
                                             </div>
                                         </li>
-                                        
-                       
                                         <li class="nav-item">
                                             <button class="btn nav-search">
                                                 <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
                                             </button>
                                         </li>
+
                                     </ul>
+
                                 </div>
                             </div>
                         </nav>
                     </div>
-                    
-                </section>  <!-- header section -->
+
             </header>
-            
+
             <main>
 
                 <section class="website-stage">
                     <div class="image-container">
-                        <div class="lazyload bg-img" 
+                        <div class="lazyload bg-img"
                              data-bgset="
-                             /dist/static/images/phone_414-736.jpg [--sm] | 
-                             /dist/static/images/tablet_1024-1366.jpg [--md] | 
+                             /dist/static/images/phone_414-736.jpg [--sm] |
+                             /dist/static/images/tablet_1024-1366.jpg [--md] |
                              /dist/static/images/stage/product.jpg"></div>
                     </div>
                 </section>
 
+                <section>
+                    <div class="outbox gray">
+                        <div class="container">
+                            <div class="page-tree" id="accordion">
+
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <div class="nav-controls">
+                                            <button class="nav-toggler collapsed" data-target="1" data-toggle="collapse" aria-expanded="false" aria-controls="m-1"></button>
+                                            <a class="nav-link" href="#">Root level 1</a>
+                                        </div>
+
+                                        <div class="collapse nav-dropdown" id="mn-1" data-parent="#accordion">
+                                            <div class="nav-container">
+
+                                                <div class="nav-dropdown-panel">
+                                                    <a class="btn-link">
+                                                        Root level 1<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg>
+                                                    </a>
+                                                    <button class="close" data-target="#mn-1" data-toggle="collapse" aria-expanded="false" aria-controls="mn-1">schliessen</button>
+                                                </div>
+
+                                                <div class="nav-dropdown-content">
+                                                    <ul class="subnav first-level">
+                                                        <li class="subnav-item">
+                                                            <div class="nav-controls">
+                                                                <button class="nav-toggler collapsed" data-target="#mn-1-1" data-toggle="collapse" aria-expanded="false" aria-controls="mn-1-1"></button>
+                                                                <a class="subnav-link" href="#">First level<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                                            </div>
+                                                            <div class="collapse" id="mn-1-1">
+                                                                <ul class="subnav second-level">
+                                                                    <li class="subnav-item">
+                                                                        <div class="nav-controls">
+                                                                            <button class="nav-toggler collapsed" data-target="#mn-1-1-1" data-toggle="collapse" aria-expanded="false" aria-controls="mn-1-1-1"></button>
+                                                                            <span class="subnav-link">Second Level</span>
+                                                                        </div>
+                                                                        <div class="collapse"  id="mn-1-1-1">
+                                                                            <ul class="subnav third-level">
+                                                                                <li class="subnav-item">
+                                                                                    <a href="" class="subnav-link">Video</a>
+                                                                                </li>
+                                                                                <li class="subnav-item">
+                                                                                    <a href="#" class="subnav-link new">Voice <svg class="icon icon-budget-new"><use  xlink:href="#icon-budget-new"></use></svg></a>
+                                                                                </li>
+                                                                                <li class="subnav-item">
+                                                                                    <a href="#" class="subnav-link">UC</a>
+                                                                                </li>
+                                                                                <li class="subnav-item">
+                                                                                    <a href="#" class="subnav-link active">Active Conferencing</a>
+                                                                                </li>
+                                                                                <li class="subnav-item">
+                                                                                    <a href="#" class="subnav-link">Collaboration</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="subnav-item">
+                                                                        <div class="nav-controls">
+                                                                            <a href="#" class="subnav-link">Second Level link 1</a>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="subnav-item">
+                                                                        <div class="nav-controls">
+                                                                            <a href="#" class="subnav-link">Second Level link 2</a>
+                                                                        </div>
+                                                                    </li>                                                                    
+                                                                </ul>     
+                                                            </div>
+                                                        </li>
+
+
+                                                        <li class="subnav-item">
+                                                            <div class="nav-controls">
+                                                                <button class="nav-toggler collapsed" href="#mn-1-2" data-toggle="collapse" aria-expanded="false" aria-controls="mn-1-2"></button>
+                                                                <span class="subnav-link">First level <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></span>
+                                                            </div>
+
+                                                            <div class="collapse" id="mn-1-2">
+                                                                <ul class="subnav second-level">
+                                                                    <li class="subnav-item">
+                                                                        <div class="nav-controls">
+                                                                            <a href="#" class="subnav-link">Second Level 2</a>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="subnav-item">
+                                                                        <div class="nav-controls">
+                                                                            <a href="#" class="subnav-link">Second Level 2</a>
+                                                                        </div>
+                                                                    </li>                                                                    
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="subnav-item">
+                                                            <div class="nav-controls">
+                                                                <span class="subnav-link">First level no link<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></span>
+                                                            </div>
+                                                        </li>   
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <div class="nav-controls">
+                                            <button class="nav-toggler collapsed" data-target="#mn-2" data-toggle="collapse" aria-expanded="false" aria-controls="m-2"></button>
+                                            <a class="nav-link" href="#">Root level 2</a>
+                                        </div>
+
+                                        <div class="collapse nav-dropdown" id="mn-2" data-parent="#accordion">
+
+                                            <div class="nav-container">
+
+                                                <div class="nav-dropdown-panel">
+                                                    <a class="btn-link">
+                                                        Root level 2<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg>
+                                                    </a>
+                                                    <button class="close" data-target="#mn-2" data-toggle="collapse" aria-expanded="false" aria-controls="mn-2">schliessen</button>
+                                                </div>
+
+                                                <div class="nav-dropdown-content simple">
+                                                    <ul class="subnav first-level">
+                                                        <li class="subnav-item">
+                                                            <div class="nav-controls">
+                                                                <a class="subnav-link" href="#">First simple 2<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="subnav-item">
+                                                            <div class="nav-controls">
+                                                                <a class="subnav-link" href="#">First simple 3<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="btn nav-search">
+                                            <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
+                                        </button>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
 
                 <section class="content-item mb-large wtg_section">
                     <div class="outbox gray">
                         <div class="container">
 
                             <div class="content-item wtg_header">
-                                <div class="align-content-10">
+                                <div class="nav-container-10">
                                     <!-- 1.1 content element header -->
                                     <div class="header-section">
                                         <span class="above-header">Video example</span>
@@ -145,7 +406,7 @@
 
                             <div class="content-item wtg_grid">
                                 <!-- 1.2 content element grid -->
-                                <div class="align-content-11-left">
+                                <div class="nav-container-11-left">
                                     <div class="body-section">
 
                                         <div class="mb-medium wtg_video">
@@ -176,7 +437,7 @@
                                                     <div class="pt-extra-small wtg_text">
                                                         <div class="body-section">
                                                             <h3>Self hosted</h3>
-                                                            <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. 
+                                                            <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth.
                                                                 Por scientie, musica, sport etc, litot Europa usa li sam vocabular.</p>
                                                             <p><a href="/#" class="btn-rte">Team anzeigen</a></p>
                                                         </div>
@@ -190,15 +451,15 @@
 
                         </div>
                     </div>
-                </section>  
+                </section>
 
 
                 <div class="content-item mb-large wtg_buttons">
                     <div class="body-section">
                         <div class="container">
-                            <div class="align-content-10">
+                            <div class="nav-container-10">
                                 <div class="cta-layout">
-                                    <p class="lead">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.</p> 
+                                    <p class="lead">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.</p>
                                     <button type="button" class="btn btn-primary">
                                         Mehr erfahren <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg>
                                     </button>
@@ -211,7 +472,7 @@
                 <section class="content-item mb-large wtg_section">
                     <div class="outbox gray">
                         <div class="container">
-                            <div class="align-content-10">
+                            <div class="nav-container-10">
                                 <div class="mb-large">
                                     <h3>SVG embed Awesome</h3>
                                     <svg class="navbar-logo"><use xlink:href="#wtg-logo"/></use></svg>
@@ -262,11 +523,23 @@
                             <svg class="icon icon-upload"><use  xlink:href="#icon-upload"></use></svg>
                             <svg class="icon icon-user"><use  xlink:href="#icon-user"></use></svg>
                         </div>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <button class="close">
+                                    Default
+                                </button></div>
+                            <div class="col-2">
+                                <button class="close hover">
+                                    Hover
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="mb-medium">  
+                    <div class="mb-medium">
                         <h3> Buttons [with icons]</h3>
-                        <div class="mb-extra-small"> 
+                        <div class="mb-extra-small">
                             <button type="button" class="btn btn-secondary">
                                 <svg class="icon arrow-left"><use xlink:href="#icon-left-arrow"></use></svg> Secondary
                             </button>
@@ -282,7 +555,7 @@
                                 Upload link <svg class="icon icon-upload"><use xlink:href="#icon-upload"></use></svg>
                             </button>&nbsp;
                         </div>
-                        <div class="mb-extra-small"> 
+                        <div class="mb-extra-small">
 
                             <button type="button" class="btn btn-secondary">
                                 Look-out link <svg class="icon icon icon-look-out"><use xlink:href="#icon-look-out"></use></svg>
@@ -297,15 +570,15 @@
                         </div>
                     </div>
 
-                    <div class="mb-medium"> 
+                    <div class="mb-medium">
                         <h3>font Awesome</h3>
-                        <div class="social-links nav"> 
-                            <a href="#" title="twitter" target="_blank" class="nav-link" rel="nofollow"> <i class="fa fa-twitter" aria-hidden="true"></i> </a> 
-                            <a href="#" title="instagram" target="_blank" class="nav-link" rel="nofollow"> <i class="fa fa-instagram" aria-hidden="true"></i> </a> 
-                            <a href="#" title="youtube-play" target="_blank" class="nav-link" rel="nofollow"> <i class="fa fa-youtube-play" aria-hidden="true"></i> </a> 
-                            <a href="#" title="facebook" target="_blank" class="nav-link" rel="nofollow"> <i class="fa fa-facebook" aria-hidden="true"></i> </a> 
-                            <a href="#" title="linkedin" target="_blank" class="nav-link" rel="nofollow"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a> 
-                            <a href="#" title="xing" target="_blank" class="nav-link" rel="nofollow"> <i class="fa fa-xing" aria-hidden="true"></i> </a> 
+                        <div class="social-links nav">
+                            <a href="#" title="twitter" target="_blank" class="nav-link" rel="nofollow"> <i class="fa fa-twitter" aria-hidden="true"></i> </a>
+                            <a href="#" title="instagram" target="_blank" class="nav-link" rel="nofollow"> <i class="fa fa-instagram" aria-hidden="true"></i> </a>
+                            <a href="#" title="youtube-play" target="_blank" class="nav-link" rel="nofollow"> <i class="fa fa-youtube-play" aria-hidden="true"></i> </a>
+                            <a href="#" title="facebook" target="_blank" class="nav-link" rel="nofollow"> <i class="fa fa-facebook" aria-hidden="true"></i> </a>
+                            <a href="#" title="linkedin" target="_blank" class="nav-link" rel="nofollow"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a>
+                            <a href="#" title="xing" target="_blank" class="nav-link" rel="nofollow"> <i class="fa fa-xing" aria-hidden="true"></i> </a>
                         </div>
                     </div>
 
@@ -369,7 +642,7 @@
 
                     <hr class="divider"/>
 
-                    <div class="mb-medium">  
+                    <div class="mb-medium">
                         <div class="text">
                             <h2><strong>Typography</strong></h2>
 
@@ -439,7 +712,7 @@
                                 <li>Faucibus porta lacus fringilla vel</li>
                                 <li>Aenean sit amet erat nunc</li>
                                 <li>Eget porttitor lorem</li>
-                            </ul>       
+                            </ul>
                             <ol>
                                 <li>Phasellus iaculis neque</li>
                                 <li>Purus sodales ultricies</li>
@@ -487,12 +760,12 @@
                                 <div class="p-3 mb-2 bg-brand-gray-dark text-white">brand-gray-dark</div>
                                 <div class="p-3 mb-2 bg-brand-red text-white">brand-red</div>
                                 <div class="p-3 mb-2 bg-brand-red-dark text-white">brand-red-dark</div>
-                            </div>                             
+                            </div>
 
                         </div>
                     </div>
 
-                    <div class="mb-medium">  
+                    <div class="mb-medium">
                         <h3> Buttons</h3>
                         <button type="button" class="btn btn-secondary">
                             <svg class="icon arrow-left"><use  xlink:href="#icon-left-arrow"/></svg> Secondary
@@ -511,7 +784,7 @@
                         </button>
                     </div>
 
-                    <div class="mb-medium">  
+                    <div class="mb-medium">
                         <h3> Buttons [lg]</h3>
                         <button type="button" class="btn btn-lg btn-secondary">
                             <svg class="icon arrow-left"><use  xlink:href="#icon-left-arrow"/></svg> Secondary
@@ -534,7 +807,7 @@
                         </button>
                     </div>
 
-                    <div class="mb-medium">  
+                    <div class="mb-medium">
                         <h3> Buttons [sm]</h3>
                         <button type="button" class="btn btn-sm btn-secondary">
                             <svg class="icon arrow-left"><use  xlink:href="#icon-left-arrow"/></svg> Secondary
@@ -551,10 +824,10 @@
 
                         <figure data-aos="zoomIn">
                             <div class="ratio ratio-screen">
-                                <div class="lazyload bg-img" 
+                                <div class="lazyload bg-img"
                                      data-bgset="
-                                     /dist/static/images/phone_414-736.jpg [--sm] | 
-                                     /dist/static/images/tablet_1024-1366.jpg [--md] | 
+                                     /dist/static/images/phone_414-736.jpg [--sm] |
+                                     /dist/static/images/tablet_1024-1366.jpg [--md] |
                                      /dist/static/images/desktop_1920-1080.jpg"></div>
                             </div>
                             <figcaption>Example with responsive background and lazyloading </figcaption>
@@ -579,7 +852,7 @@
                     </div>
 
 
-                </div> 
+                </div>
             </main>
         </div>
 

@@ -1,0 +1,32 @@
+button.close{
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    color: $brand-gray-dark; 
+    font-size: rem(14px);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+    opacity: 1;
+    letter-spacing: 0.35px;
+    font-weight: $font-weight-bold;
+
+    &:after{
+        transition: opacity 0.15s ease-in-out;
+        content: "";
+        position: relative;
+        height: 2rem;
+        width: 2rem;
+        margin-left: 10px;
+        @include svgicons($black, 'close');
+    } 
+
+    &:hover, &:focus, &:active, &.hover{
+        opacity: 1;
+        text-decoration: none;
+        &:after{
+            opacity: 0.6;
+        }
+    }
+}
