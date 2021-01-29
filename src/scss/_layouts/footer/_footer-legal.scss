@@ -1,0 +1,45 @@
+.footer-legal {
+  @include media-breakpoint-down(sm) {
+   padding-bottom: 15px;
+   justify-content: center;
+  }
+
+  &-item {
+    position: relative;
+    padding: 0 10px;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 12px;
+      width: 1px;
+      background-color: $black;
+      right: 0;
+      top: 50%;
+      position: absolute;
+      transform: translateY(-50%);
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &-link {
+    color: $black;
+    font-size: rem(14px);
+    line-height: rem(24px);
+    letter-spacing: rem(0.35px);
+    text-decoration: none;
+    padding: 0;
+    transition: 0.15s ease;
+  }
+}
