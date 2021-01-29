@@ -1,8 +1,8 @@
 export default (() => {
   const body = $("body");
-  const siteWrapper = $(".site-wrapper");
+  const siteWrapper = $(".website-wrapper");
   const header = $("#header .header");
-  const navbar = $("#navbar .navbar");
+  const navbar = $("#navbar .navbar"); 
   const navbarContent = navbar.find("#mainNav");
   const navMenu = navbar.find(".nav-menu");
   const navMenuSubsection = navMenu.find(".nav-menu-subsection");
@@ -28,7 +28,7 @@ export default (() => {
     e.stopPropagation();
 
     setTimeout(() => {                          // setTimeout() here to fix events priority (show fires first without it)
-      $(e.target.parentElement).children(".nav-controls").addClass("nav-controls-active");
+      $(e.target.parentElement).children(".nav-controls").addClass("active");
       $(e.target.parentElement).find(".nav-link-top").addClass("nav-link-active");
 
       header.addClass("header-active");
@@ -41,7 +41,7 @@ export default (() => {
   navMenu.on('hide.bs.collapse', function (e) {
     e.stopPropagation();
 
-    $(e.target.parentElement).children(".nav-controls").removeClass("nav-controls-active");
+    $(e.target.parentElement).children(".nav-controls").removeClass("active");
     $(e.target.parentElement).find(".nav-link-top").removeClass("nav-link-active");
  
     setTimeout(() => {                          // setTimeout() here to fix flickering on toggle (remove classes only if no other panel was opened)
@@ -62,7 +62,7 @@ export default (() => {
     }
 
     setTimeout(() => {
-      $(e.target.parentElement).children(".nav-controls").addClass("nav-controls-active");
+      $(e.target.parentElement).children(".nav-controls").addClass("active");
     }, 1)
   });
 
@@ -74,7 +74,7 @@ export default (() => {
       e.preventDefault();
     }
 
-    $(e.target.parentElement).children(".nav-controls").removeClass("nav-controls-active");
+    $(e.target.parentElement).children(".nav-controls").removeClass("active");
   });
 
   $(window).on("resize", function() {
@@ -115,4 +115,4 @@ export default (() => {
   
     $(window).trigger("scroll");
   }
-})();
+})(); 

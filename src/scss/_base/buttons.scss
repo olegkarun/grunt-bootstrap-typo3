@@ -1,38 +1,9 @@
 $btn-icon-gutter: 10px;
 
-//custom type of button
-.btn-link{
-    color: $body-color;
-    padding: 0;
-    border:0;
-    stroke: $body-color;
-
-    &:hover, &:active, {
-        text-decoration: none;
-        color: $body-color;
-        svg{
-            stroke: $body-color;
-            margin-left: $btn-icon-gutter;
-        }
+button{
+    &:hover, &:active, &:focus{
+        outline: 0;
     }
-}
-
-@each $color, $value in $theme-colors {
-    .btn-link-#{$color} {
-        color: $value;
-        stroke: $value;
-        padding: 0;
-        border:0;
-        svg{
-            stroke: $value;
-        }
-        &:hover, &:active{
-            color: $value;
-            svg{
-                stroke: $value;
-            }
-        }
-    } 
 }
 
 
@@ -88,6 +59,9 @@ $btn-icon-gutter: 10px;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.4px;
+
     svg{
         @include transition(stroke 0.15s ease-in-out, left 0.15s ease-in-out, right 0.15s ease-in-out); //check $btn-transition
         &.icon{
@@ -120,6 +94,8 @@ $btn-icon-gutter: 10px;
 
 
     &.btn-lg{
+        font-weight: $font-weight-bold;
+
         .arrow-right, .arrow-left{
             width: 32px;
             height: 23px;
@@ -140,3 +116,47 @@ $btn-icon-gutter: 10px;
     }
 
 } 
+
+@each $color, $value in $theme-colors {
+    .btn-link-#{$color} {
+        color: $value;
+        stroke: $value;
+        padding: 0;
+        border:0;
+        svg{
+            stroke: $value;
+        }
+        &:hover, &:active{
+            color: $value;
+            svg{
+                stroke: $value;
+            }
+        }
+    } 
+}
+
+//custom type of button
+.btn-link{
+    color: $body-color;
+    padding: 0;
+    border:0;
+    stroke: $body-color;
+
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+        color: $body-color;
+        svg{
+            stroke: $body-color;
+            margin-left: $btn-icon-gutter;
+        }
+    }
+}
+
+.btn-link-primary{
+    @include hover-focus-active{
+        color: $brand-red-dark;
+        svg{
+            stroke: $brand-red-dark;
+        }
+    }
+}

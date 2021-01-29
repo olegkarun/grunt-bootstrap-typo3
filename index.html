@@ -30,821 +30,248 @@
     </head>
 
     <body>
-        <div class="site-wrapper page-home">
-            <div id="header">
-              <header class="header header-home">
-                <div id="navbar" class="container">
-                  <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="#">
-                      <svg class="navbar-logo">
-                        <use xlink:href="#wtg-logo"/>
-                      </svg>
-                      <svg class="navbar-logo navbar-logo-home">
-                        <use xlink:href="#wtg-logo-home"/>
-                      </svg>
-                    </a>
-                    <button class="btn nav-search nav-search-mobile">
-                      <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
-                    </button>
-                    <button class="toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                      <div class="toggler-open">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
-                      <svg class="toggler-close">
-                        <use xlink:href="#icon-close-nav">
-                      </svg>
-                    </button>
-                    <div class="collapse navbar-collapse navbar-content" id="mainNav">
-                      <div class="container">
-                        <ul class="topbar">
-                          <li class="topbar-item">
-                            <a href="" class="topbar-link">Newsletter</a>
-                          </li>
-                          <li class="topbar-item">
-                            <a href="" class="topbar-link">Contact</a>
-                          </li>
-                          <li class="topbar-item dropdown">
-                            <a href="" class="topbar-link dropdown-toggle" id="topbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Deutsch</a>
-                            <div class="dropdown-menu" aria-labelledby="topbarDropdownMenuLink">
-                              <a class="dropdown-item" href="#">Englisch</a>
-                              <a class="dropdown-item" href="#">Russisch</a>
+        <div class="website-wrapper">
+
+            <header class="website-header home"> <!--default-->
+
+                <div  class="container">
+                    <!-- navbar -->
+                    <nav class="navbar navbar-expand-lg" id="navbar">
+                        <a class="navbar-brand" href="#">
+                            <svg class="navbar-logo"><use xlink:href="#wtg-logo"></use></svg>
+                            <svg class="navbar-logo white"><use xlink:href="#wtg-logo-home"></use></svg>
+                        </a>
+                        <button class="btn nav-search nav-search-mobile">
+                            <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
+                        </button>
+                        <button class="toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="toggler-open"><span></span><span></span><span></span></div>
+                            <svg class="toggler-close"><use xlink:href="#icon-close-nav"></use></svg>
+                        </button>
+
+
+                        <div class="collapse navbar-collapse navbar-content" id="mainNav">
+                            <div class="navbar-content-flexwrap">
+
+                                <!-- toolbar -->
+                                <ul class="metanav">
+                                    <li class="metanav-item">
+                                        <a href="#" class="metanav-link">Newsletter</a>
+                                    </li>
+                                    <li class="metanav-item">
+                                        <a href="#" class="metanav-link">Contact</a>
+                                    </li>
+                                    <li class="metanav-item dropdown">
+                                        <a href="#" class="metanav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Deutsch</a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Englisch</a>
+                                            <a class="dropdown-item" href="#">Russisch</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- / toolbar -->
+
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <div class="nav-controls">
+                                            <button class="nav-toggler collapsed" data-target="#m-1" data-toggle="collapse" aria-expanded="false" aria-controls="m-1"></button>
+                                            <a class="nav-link" href="#">Root level 1</a>
+                                        </div>
+
+                                        <div class="collapse nav-dropdown" id="m-1" data-parent="#mainNav">
+                                            <div class="nav-container">
+
+                                                <div class="nav-dropdown-panel">
+                                                    <a class="btn-link">
+                                                        Root level 1<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg>
+                                                    </a>
+                                                    <button class="close" data-target="#m-1" data-toggle="collapse" aria-expanded="false" aria-controls="m-1">schliessen</button>
+                                                </div>
+
+                                                <div class="nav-dropdown-content">
+                                                    <ul class="subnav first-level">
+                                                        <li class="subnav-item">
+                                                            <div class="nav-controls">
+                                                                <button class="nav-toggler collapsed" data-target="#m-1-1" data-toggle="collapse" aria-expanded="false" aria-controls="m-1-1"></button>
+                                                                <a class="subnav-link" href="#">First level<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                                            </div>
+                                                            <div class="collapse" id="m-1-1">
+                                                                <ul class="subnav second-level">
+                                                                    <li class="subnav-item">
+                                                                        <div class="nav-controls">
+                                                                            <button class="nav-toggler collapsed" data-target="#m-1-1-1" data-toggle="collapse" aria-expanded="false" aria-controls="m-1-1-1"></button>
+                                                                            <span class="subnav-link">Contact Center</span>
+                                                                        </div>
+                                                                        <div class="collapse"  id="m-1-1-1">
+                                                                            <ul class="subnav third-level">
+                                                                                <li class="subnav-item">
+                                                                                    <a href="#" class="subnav-link">Video</a>
+                                                                                </li>
+                                                                                <li class="subnav-item">
+                                                                                    <a href="#" class="subnav-link new">Voice <svg class="icon icon-budget-new"><use  xlink:href="#icon-budget-new"></use></svg></a>
+                                                                                </li>
+                                                                                <li class="subnav-item">
+                                                                                    <a href="#" class="subnav-link">UC</a>
+                                                                                </li>
+                                                                                <li class="subnav-item">
+                                                                                    <a href="#" class="subnav-link active">Active Conferencing</a>
+                                                                                </li>
+                                                                                <li class="subnav-item">
+                                                                                    <a href="#" class="subnav-link">Collaboration</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="subnav-item">
+                                                                        <div class="nav-controls">
+                                                                            <span href="#" class="subnav-link">UC / UCC [nolink]</span>
+                                                                            <button class="nav-toggler collapsed" data-target="#m-1-1-2" data-toggle="collapse" aria-expanded="false" aria-controls="m-1-1-2"></button>
+                                                                        </div>
+                                                                        <div class="collapse"  id="m-1-1-2">
+                                                                            <ul class="subnav third-level">
+                                                                                <li class="subnav-item">
+                                                                                    <a href="#" class="subnav-link">Multichannel Contact Center</a>
+                                                                                </li>
+
+                                                                                <li class="subnav-item">
+                                                                                    <a href="#" class="subnav-link">Routing & Switching</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>                                                                        
+                                                                    </li>
+
+                                                                    <li class="subnav-item">
+                                                                        <div class="nav-controls">
+                                                                            <a href="#" class="subnav-link">Second Level [link]</a>
+                                                                        </div>
+                                                                    </li>                                                                    
+                                                                </ul>     
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="subnav-item">
+                                                            <div class="nav-controls">
+                                                                <button class="nav-toggler collapsed" href="#m-1-2" data-toggle="collapse" aria-expanded="false" aria-controls="m-1-2"></button>
+                                                                <a href="#" class="subnav-link">First level <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                                            </div>
+
+                                                            <div class="collapse" id="m-1-2">
+                                                                <ul class="subnav second-level">
+                                                                    <li class="subnav-item">
+                                                                        <div class="nav-controls">
+                                                                            <a href="#" class="subnav-link">Second Level 2</a>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="subnav-item">
+                                                                        <div class="nav-controls">
+                                                                            <a href="#" class="subnav-link">Second Level 2</a>
+                                                                        </div>
+                                                                    </li>                                                                    
+                                                                </ul>
+                                                            </div>
+
+                                                        </li>  
+
+                                                        <li class="subnav-item">
+                                                            <div class="nav-controls">
+                                                                <span class="subnav-link">First level no link<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></span>
+                                                            </div>
+                                                        </li>   
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <div class="nav-controls">
+                                            <button class="nav-toggler collapsed" data-target="#m-2" data-toggle="collapse" aria-expanded="false" aria-controls="m-2"></button>
+                                            <a class="nav-link active" href="#">Root level 2</a>
+                                        </div>
+
+                                        <div class="collapse nav-dropdown" id="m-2" data-parent="#mainNav">
+
+                                            <div class="nav-container">
+
+                                                <div class="nav-dropdown-panel">
+                                                    <a class="btn-link">
+                                                        Root level 2<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg>
+                                                    </a>
+                                                    <button class="close" data-target="#m-2" data-toggle="collapse" aria-expanded="false" aria-controls="m-2">schliessen</button>
+                                                </div>
+
+                                                <div class="nav-dropdown-content simple">
+                                                    <ul class="subnav first-level">
+                                                        <li class="subnav-item">
+                                                            <div class="nav-controls">
+                                                                <a class="subnav-link" href="#">First simple 2<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="subnav-item">
+                                                            <div class="nav-controls">
+                                                                <a class="subnav-link" href="#">First simple 3<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <div class="nav-controls">
+                                            <a class="nav-link" href="#">Service</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <div class="nav-controls">
+                                            <a class="nav-link" href="#">Produkte</a>
+                                        </div>
+                                    </li>                                    
+
+                                    <li class="nav-item">
+                                        <div class="nav-controls">
+                                            <a class="nav-link" href="#">Unternehmen</a>
+                                        </div>
+                                    </li>   
+
+                                    <li class="nav-item">
+                                        <div class="nav-controls">
+                                            <a class="nav-link" href="#">Karriere</a>
+                                        </div>
+                                    </li>                                     
+
+                                    <li class="nav-item icon-search">
+                                        <button class="btn nav-search">
+                                            <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
+                                        </button>
+                                    </li>
+
+
+                                </ul>
+
                             </div>
-                          </li>
-                        </ul>
-                        <ul class="navbar-nav">
-                          <li class="nav-item">
-                            <div class="nav-controls">
-                              <a class="nav-link nav-link-top nav-link-toggler nav-link-current" href="#m-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-1">Home <span class="sr-only">(current)</span></a>
-                              <a class="nav-link nav-link-top nav-link-mobile" href="#">Home <span class="sr-only">(current)</span></a>
-                            </div>
-                            <div class="collapse nav-menu" id="m-1" data-parent="#header">
-                              <div class="container">
-                                <div class="nav-menu-top">
-                                  <a class="btn btn-lg btn-link-primary nav-menu-heading">
-                                    Lösungen
-                                    <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg>
-                                  </a>
-                                  <a class="nav-menu-close" href="#m-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-1">
-                                    schliessen
-                                  </a>
-                                </div>
-                                <div class="nav-menu-content">
-                                  <div class="nav-menu-section">
-                                    <div class="nav-controls">
-                                      <a class="btn btn-lg btn-link-dark nav-link-subheading nav-link-toggler" href="#m-1-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-1-1">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
-                                      <a class="btn btn-lg btn-link-dark nav-link-subheading nav-link-mobile" href="#">IT und Kommunikation</a>
-                                    </div>
-                                    <div class="collapse nav-menu-subsection" id="m-1-1">
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-1-1-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-1-1-1">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                          <ul class="collapse nav-menu-subsection nav-menu-list" id="m-1-1-1">
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Video</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">UC</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link nav-menu-link-current">Conferencing</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Collaboration</a>
-                                            </li>
-                                          </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-1-1-2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-1-1-2">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-1-1-2">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <a class="nav-link-type nav-link-toggler" href="#m-1-1-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-1-1-2">Contact Center</a>
-                                          <a class="nav-link-type nav-link-mobile" href="#">Contact Center</a>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-1-1-3">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="nav-menu-section">
-                                    <div class="nav-controls">
-                                      <a class="btn btn-lg btn-link-dark nav-link-subheading nav-link-toggler" href="#m-1-2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-1-2">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
-                                      <a class="btn btn-lg btn-link-dark nav-link-subheading nav-link-mobile" href="#">IT und Kommunikation</a>
-                                    </div>
-                                    <div class="collapse nav-menu-subsection" id="m-1-2">
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-1-2-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-1-2-1">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                          <ul class="collapse nav-menu-subsection nav-menu-list" id="m-1-2-1">
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Video</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">UC</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link nav-menu-link-current">Conferencing</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Collaboration</a>
-                                            </li>
-                                          </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-1-2-2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-1-2-2">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-1-2-2">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <a class="nav-link-type nav-link-toggler" href="#m-1-2-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-1-2-3">Contact Center</a>
-                                          <a class="nav-link-type nav-link-mobile" href="#">Contact Center</a>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-1-2-3">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="nav-menu-section">
-                                    <div class="nav-controls">
-                                      <span class="btn btn-lg btn-link-dark nav-link-subheading nav-link-subheading-no-subpage nav-link-toggler" href="#m-1-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-1-3">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></span>
-                                      <span class="btn btn-lg btn-link-dark nav-link-subheading nav-link-subheading-no-subpage nav-link-mobile">IT und Kommunikation</span>
-                                    </div>
-                                    <div class="collapse nav-menu-subsection" id="m-1-3">
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-1-3-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-1-3-1">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                          <ul class="collapse nav-menu-subsection nav-menu-list" id="m-1-3-1">
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Video</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">UC</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link nav-menu-link-current">Conferencing</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Collaboration</a>
-                                            </li>
-                                          </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-1-3-2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-1-3-2">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-1-3-2">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <a class="nav-link-type nav-link-toggler" href="#m-1-3-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-1-3-3">Contact Center</a>
-                                          <a class="nav-link-type nav-link-mobile" href="#">Contact Center</a>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-1-3-3">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="nav-item">
-                            <div class="nav-controls">
-                              <a class="nav-link nav-link-top nav-link-toggler" href="#m-2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-2">Features</a>
-                              <a class="nav-link nav-link-top nav-link-mobile" href="#">Features</a>
-                            </div>
-                            <div class="collapse nav-menu" id="m-2" data-parent="#header">
-                              <div class="container">
-                                <div class="nav-menu-top">
-                                  <a class="btn btn-lg btn-link-primary nav-menu-heading">
-                                    Lösungen
-                                    <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg>
-                                  </a>
-                                  <a class="nav-menu-close" href="#m-2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-2">
-                                    schliessen
-                                  </a>
-                                </div>
-                                <div class="nav-menu-content">
-                                  <div class="nav-menu-section">
-                                    <div class="nav-controls">
-                                      <a class="btn btn-lg btn-link-dark nav-link-subheading nav-link-toggler" href="#m-2-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-2-1">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
-                                      <a class="btn btn-lg btn-link-dark nav-link-subheading nav-link-mobile" href="#">IT und Kommunikation</a>
-                                    </div>
-                                    <div class="collapse nav-menu-subsection" id="m-2-1">
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-2-1-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-2-1-1">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                          <ul class="collapse nav-menu-subsection nav-menu-list" id="m-2-1-1">
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Video</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">UC</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link nav-menu-link-current">Conferencing</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Collaboration</a>
-                                            </li>
-                                          </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-2-1-2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-2-1-2">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-2-1-2">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <a class="nav-link-type nav-link-toggler" href="#m-2-1-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-2-1-2">Contact Center</a>
-                                          <a class="nav-link-type nav-link-mobile" href="#">Contact Center</a>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-2-1-3">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="nav-menu-section">
-                                    <div class="nav-controls">
-                                      <a class="btn btn-lg btn-link-dark nav-link-subheading nav-link-toggler" href="#m-2-2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-2-2">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
-                                      <a class="btn btn-lg btn-link-dark nav-link-subheading nav-link-mobile" href="#">IT und Kommunikation</a>
-                                    </div>
-                                    <div class="collapse nav-menu-subsection" id="m-2-2">
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-2-2-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-2-2-1">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                          <ul class="collapse nav-menu-subsection nav-menu-list" id="m-2-2-1">
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Video</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">UC</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link nav-menu-link-current">Conferencing</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Collaboration</a>
-                                            </li>
-                                          </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-2-2-2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-2-2-2">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-2-2-2">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <a class="nav-link-type nav-link-toggler" href="#m-2-2-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-2-2-3">Contact Center</a>
-                                          <a class="nav-link-type nav-link-mobile" href="#">Contact Center</a>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-2-2-3">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="nav-menu-section">
-                                    <div class="nav-controls">
-                                      <span class="btn btn-lg btn-link-dark nav-link-subheading nav-link-subheading-no-subpage nav-link-toggler" href="#m-2-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-2-3">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></span>
-                                      <span class="btn btn-lg btn-link-dark nav-link-subheading nav-link-subheading-no-subpage nav-link-mobile">IT und Kommunikation</span>
-                                    </div>
-                                    <div class="collapse nav-menu-subsection" id="m-2-3">
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-2-3-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-2-3-1">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                          <ul class="collapse nav-menu-subsection nav-menu-list" id="m-2-3-1">
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Video</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">UC</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link nav-menu-link-current">Conferencing</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Collaboration</a>
-                                            </li>
-                                          </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-2-3-2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-2-3-2">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-2-3-2">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <a class="nav-link-type nav-link-toggler" href="#m-2-3-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-2-3-3">Contact Center</a>
-                                          <a class="nav-link-type nav-link-mobile" href="#">Contact Center</a>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-2-3-3">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="nav-item">
-                            <div class="nav-controls">
-                              <a class="nav-link nav-link-top nav-link-toggler" href="#m-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-3">Lösungen</a>
-                              <a class="nav-link nav-link-top nav-link-mobile" href="#">Lösingen</a>
-                            </div>
-                            <div class="collapse nav-menu" id="m-3" data-parent="#header">
-                              <div class="container">
-                                <div class="nav-menu-top">
-                                  <a class="btn btn-lg btn-link-primary nav-menu-heading">
-                                    Lösungen
-                                    <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg>
-                                  </a>
-                                  <a class="nav-menu-close" href="#m-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-3">
-                                    schliessen
-                                  </a>
-                                </div>
-                                <div class="nav-menu-content">
-                                  <div class="nav-menu-section">
-                                    <div class="nav-controls">
-                                      <a class="btn btn-lg btn-link-dark nav-link-subheading nav-link-toggler" href="#m-3-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-3-1">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
-                                      <a class="btn btn-lg btn-link-dark nav-link-subheading nav-link-mobile" href="#">IT und Kommunikation</a>
-                                    </div>
-                                    <div class="collapse nav-menu-subsection" id="m-3-1">
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-3-1-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-3-1-1">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                          <ul class="collapse nav-menu-subsection nav-menu-list" id="m-3-1-1">
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Video</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">UC</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link nav-menu-link-current">Conferencing</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Collaboration</a>
-                                            </li>
-                                          </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-3-1-2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-3-1-2">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-3-1-2">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <a class="nav-link-type nav-link-toggler" href="#m-3-1-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-3-1-2">Contact Center</a>
-                                          <a class="nav-link-type nav-link-mobile" href="#">Contact Center</a>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-3-1-3">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="nav-menu-section">
-                                    <div class="nav-controls">
-                                      <a class="btn btn-lg btn-link-dark nav-link-subheading nav-link-toggler" href="#m-3-2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-3-2">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
-                                      <a class="btn btn-lg btn-link-dark nav-link-subheading nav-link-mobile" href="#">IT und Kommunikation</a>
-                                    </div>
-                                    <div class="collapse nav-menu-subsection" id="m-3-2">
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-3-2-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-3-2-1">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                          <ul class="collapse nav-menu-subsection nav-menu-list" id="m-3-2-1">
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Video</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">UC</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link nav-menu-link-current">Conferencing</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Collaboration</a>
-                                            </li>
-                                          </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-3-2-2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-3-2-2">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-3-2-2">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <a class="nav-link-type nav-link-toggler" href="#m-3-2-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-3-2-3">Contact Center</a>
-                                          <a class="nav-link-type nav-link-mobile" href="#">Contact Center</a>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-3-2-3">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="nav-menu-section">
-                                    <div class="nav-controls">
-                                      <span class="btn btn-lg btn-link-dark nav-link-subheading nav-link-subheading-no-subpage nav-link-toggler" href="#m-3-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-3-3">IT und Kommunikation <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></span>
-                                      <span class="btn btn-lg btn-link-dark nav-link-subheading nav-link-subheading-no-subpage nav-link-mobile">IT und Kommunikation</span>
-                                    </div>
-                                    <div class="collapse nav-menu-subsection" id="m-3-3">
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-3-3-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-3-3-1">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                          <ul class="collapse nav-menu-subsection nav-menu-list" id="m-3-3-1">
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Video</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">UC</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link nav-menu-link-current">Conferencing</a>
-                                            </li>
-                                            <li class="nav-menu-list-item">
-                                              <a href="" class="nav-menu-link">Collaboration</a>
-                                            </li>
-                                          </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-toggler" href="#m-3-3-2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-3-3-2">Contact Center</span>
-                                          <span class="nav-link-type nav-link-type-no-subpage nav-link-mobile">Contact Center</span>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-3-3-2">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="nav-menu-type">
-                                        <div class="nav-controls">
-                                          <a class="nav-link-type nav-link-toggler" href="#m-3-3-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="m-3-3-3">Contact Center</a>
-                                          <a class="nav-link-type nav-link-mobile" href="#">Contact Center</a>
-                                        </div>
-                                        <ul class="collapse nav-menu-subsection nav-menu-list" id="m-3-3-3">
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Video</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Voice <svg class="icon icon-budget-new red-stroke"><use  xlink:href="#icon-budget-new"></use></svg></a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">UC</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Conferencing</a>
-                                          </li>
-                                          <li class="nav-menu-list-item">
-                                            <a href="" class="nav-menu-link">Collaboration</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="nav-item">
-                            <button class="btn nav-search">
-                              <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
-                            </button>
-                          </li>
-                         </ul>
-                      </div>
-                    </div>
-                  </nav>
+                        </div>
+                    </nav>
                 </div>
-              </header>
-            </div>
+            </header>
+
 
             <main>
 
+                <section class="website-stage">
+                    <div class="image-container">
+                        <div class="lazyload bg-img"
+                             data-bgset="
+                             /dist/static/images/phone_414-736.jpg [--sm] |
+                             /dist/static/images/tablet_1024-1366.jpg [--md] |
+                             /dist/static/images/stage/product.jpg"></div>
+                    </div>
+                </section> 
 
                 <!-- .. CONTENT AREA ... -->
 
@@ -1161,164 +588,177 @@
                         </ul>
                     </div>
                 </div>
+
+                <section class="contnet-item wtg_section">
+                    <div class="outbox image-container">
+                        <div class="lazyload bg-img"
+                             data-bgset="
+                             /dist/static/images/phone_414-736.jpg [--sm] |
+                             /dist/static/images/tablet_1024-1366.jpg [--md] |
+                             /dist/static/images/stage/product.jpg"></div>
+                        <div class="container">
+                            
+                        </div>
+                    </div>
+                </section> 
+
             </main>
 
-            <div id="footer">
-              <div class="cta"></div>
 
-              <footer class="footer">
-                <div class="container">
-                  <div class="footer-block">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <svg class="footer-logo">
-                          <use xlink:href="#wtg-logo"/>
-                        </svg>
-                      </div>
-                      <div class="col-md-6">
-                        <h6 class="footer-heading">WTG Folgen</h6>
-                        <ul class="nav social-links footer-social">
-                          <li class="nav-item footer-social-item">
-                            <a href="" class="nav-link footer-social-link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                          </li>
-                          <li class="nav-item footer-social-item">
-                            <a href="" class="nav-link footer-social-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                          </li>
-                          <li class="nav-item footer-social-item">
-                            <a href="" class="nav-link footer-social-link"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                          </li>
-                          <li class="item-item footer-social-item">
-                            <a href="" class="nav-link footer-social-link"><i class="fa fa-xing" aria-hidden="true"></i></a>
-                          </li>
-                          <li class="nav-item footer-social-item">
-                            <a href="" class="nav-link footer-social-link"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                          </li>
-                        </ul>
-                      </div>
+
+            <div id="footer">
+
+                <footer class="footer">
+                    <div class="container">
+                        <div class="footer-block">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <svg class="footer-logo">
+                                    <use xlink:href="#wtg-logo"/>
+                                    </svg>
+                                </div>
+                                <div class="col-md-6">
+                                    <span class="above-header">WTG Folgen</span>
+                                    <ul class="nav social-links footer-social">
+                                        <li class="nav-item footer-social-item">
+                                            <a href="#" class="nav-link footer-social-link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li class="nav-item footer-social-item">
+                                            <a href="#" class="nav-link footer-social-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li class="nav-item footer-social-item">
+                                            <a href="#" class="nav-link footer-social-link"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li class="item-item footer-social-item">
+                                            <a href="#" class="nav-link footer-social-link"><i class="fa fa-xing" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li class="nav-item footer-social-item">
+                                            <a href="#" class="nav-link footer-social-link"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-block">
+                            <span class="above-header">Inhalte</h6>
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="footer-menu">
+                                        <a href="#" class="footer-menu-heading">Lösungen</a>
+                                        <ul class="footer-menu-list">
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">IT und Kommunikation</a>
+                                            </li>
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">Sicheresysteme</a>
+                                            </li>
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">Leitstellentechnik</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-menu">
+                                        <a href="#" class="footer-menu-heading">Cloud</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="footer-menu">
+                                        <a href="#" class="footer-menu-heading">Service</a>
+                                        <ul class="footer-menu-list">
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">IT und Kommunikation</a>
+                                            </li>
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">Sicheresysteme</a>
+                                            </li>
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">Leitstellentechnik</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-menu">
+                                        <a href="#" class="footer-menu-heading">Produkte</a>
+                                        <ul class="footer-menu-list">
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">IT und Kommunikation</a>
+                                            </li>
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">Leitstellentechnik</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="footer-menu">
+                                        <a href="#" class="footer-menu-heading">Unternehmen</a>
+                                        <ul class="footer-menu-list">
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">Historie</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-menu">
+                                        <a href="#" class="footer-menu-heading">Karriere</a>
+                                        <ul class="footer-menu-list">
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">Senior-level</a>
+                                            </li>
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">Junior-level</a>
+                                            </li>
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">Studierende/Azubis</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="footer-menu">
+                                        <a href="#" class="footer-menu-heading">Aktuelles</a>
+                                        <ul class="footer-menu-list">
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">News</a>
+                                            </li>
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">Presse</a>
+                                            </li>
+                                            <li class="footer-menu-item">
+                                                <a href="#" class="footer-menu-link">Event</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-block">
+                            <div class="row">
+                                <div class="col-md-6 d-flex justify-content-center justify-content-md-end order-md-1">
+                                    <ul class="nav footer-legal">
+                                        <li class="nav-item footer-legal-item">
+                                            <a href="#" class="nav-link footer-legal-link">Newsletter</a>
+                                        </li>
+                                        <li class="nav-item footer-legal-item">
+                                            <a href="#" class="nav-link footer-legal-link">Kontakt</a>
+                                        </li>
+                                        <li class="nav-item footer-legal-item">
+                                            <a href="#" class="nav-link footer-legal-link">Impressum</a>
+                                        </li>
+                                        <li class="nav-item footer-legal-item">
+                                            <a href="#" class="nav-link footer-legal-link">Datenschutzhinweis</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 d-flex justify-content-center justify-content-md-start">
+                                    <div class="footer-copyright">
+                                        Copyiright WTG Gruppe 2021
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="footer-block">
-                    <h6 class="footer-heading">Inhalte</h6>
-                    <div class="row">
-                      <div class="col-sm-6 col-lg-3">
-                        <div class="footer-menu">
-                          <a href="" class="footer-menu-heading">Lösungen</a>
-                          <ul class="footer-menu-list">
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">IT und Kommunikation</a>
-                            </li>
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">Sicheresysteme</a>
-                            </li>
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">Leitstellentechnik</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="footer-menu">
-                          <a href="" class="footer-menu-heading">Cloud</a>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-lg-3">
-                        <div class="footer-menu">
-                          <a href="" class="footer-menu-heading">Service</a>
-                          <ul class="footer-menu-list">
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">IT und Kommunikation</a>
-                            </li>
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">Sicheresysteme</a>
-                            </li>
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">Leitstellentechnik</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="footer-menu">
-                          <a href="" class="footer-menu-heading">Produkte</a>
-                          <ul class="footer-menu-list">
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">IT und Kommunikation</a>
-                            </li>
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">Leitstellentechnik</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-lg-3">
-                        <div class="footer-menu">
-                          <a href="" class="footer-menu-heading">Unternehmen</a>
-                          <ul class="footer-menu-list">
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">Historie</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="footer-menu">
-                          <a href="" class="footer-menu-heading">Karriere</a>
-                          <ul class="footer-menu-list">
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">Senior-level</a>
-                            </li>
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">Junior-level</a>
-                            </li>
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">Studierende/Azubis</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-lg-3">
-                        <div class="footer-menu">
-                          <a href="" class="footer-menu-heading">Aktuelles</a>
-                          <ul class="footer-menu-list">
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">News</a>
-                            </li>
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">Presse</a>
-                            </li>
-                            <li class="footer-menu-item">
-                              <a href="" class="footer-menu-link">Event</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="footer-block">
-                    <div class="row">
-                      <div class="col-md-6 d-flex justify-content-center justify-content-md-end order-md-1">
-                        <ul class="nav footer-legal">
-                          <li class="nav-item footer-legal-item">
-                            <a href="" class="nav-link footer-legal-link">Newsletter</a>
-                          </li>
-                          <li class="nav-item footer-legal-item">
-                            <a href="" class="nav-link footer-legal-link">Kontakt</a>
-                          </li>
-                          <li class="nav-item footer-legal-item">
-                            <a href="" class="nav-link footer-legal-link">Impressum</a>
-                          </li>
-                          <li class="nav-item footer-legal-item">
-                            <a href="" class="nav-link footer-legal-link">Datenschutzhinweis</a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="col-md-6 d-flex justify-content-center justify-content-md-start">
-                        <div class="footer-copyright">
-                          Copyiright WTG Gruppe 2021
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </footer>
+                </footer>
             </div>
         </div>
-
-
 
         <div id="svg-icons"></div>
     </body>

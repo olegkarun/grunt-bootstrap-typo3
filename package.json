@@ -12,6 +12,7 @@
     "sprite": "webpack --mode=development --progress --config='./webpack.config('2').js'",
     "watch": "webpack --mode=development --watch",
     "start": "webpack serve --open --mode=development",
+    "start-typo3": "webpack serve --host wtg.typozone.pro --port 8081 --open --mode=development ",
     "production": "webpack --mode=production --progress --devtool=hidden-source-map",
     "prod": "webpack --mode=production --progress --devtool=hidden-source-map",
     "clear": "del-cli dist"

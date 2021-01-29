@@ -1,0 +1,37 @@
+$navigation-spacer: 40px;
+
+//custom navigation containers
+.navbar-content-flexwrap, .nav-container{
+    @extend .container;
+    flex-direction: column;
+}
+
+.website-header {
+    .navbar {
+        height: 100%;
+        padding-top: $spacer * 1.5;
+        padding-bottom: $spacer;
+
+        // root collapser
+        &-content {
+            height: 100%;
+            @include media-breakpoint-up(lg) {
+                &-flexwrap {
+                    align-items: flex-end;
+                    padding: 0;
+                    height: 100%;
+                }
+            }
+            .nav-container{
+                display: block;
+            }
+        } 
+    }
+}
+
+body {
+    &.body-overflow {
+        overflow: hidden;
+        height: 100vh;
+    }
+}

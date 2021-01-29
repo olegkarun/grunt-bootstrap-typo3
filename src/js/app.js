@@ -5,14 +5,11 @@ import 'bootstrap';
 import {testArrowFunction, testFunctionDeclaration} from "./modules/example.js"
 
 /** import of default export */
-import testDefaultFunction from "./modules/example.js"
-
-import "./modules/header";
-
+//import testDefaultFunction from "./modules/example.js"
 const projectPath = '/dist'; //after integration will be typo3conf/ext/theme/Resporces/Public
 const cssBreakpoints = {sm: '992', md:'1280'}; //should be same breakpoint bootstrap/variable
-
 global.cssBreakpoints = cssBreakpoints;
+
 
 /*
  * ### services ####
@@ -25,23 +22,9 @@ import './services/videojs.js';
 svginject(projectPath+'/img/icons.svg'); 
 AOSInitFunction(cssBreakpoints);
 
+
 /*
- * ### tests ####
+ * ### modules ####
  */
-$(document).ready(function () {
-    console.log('Webpack loaded!');
-});
-
-const a = 10;
-
-async function mysupertest() {
-  return Promise.resolve()
-}
-
-mysupertest().then(() => console.log("test"))
-
-
-testArrowFunction();
-testFunctionDeclaration();
-testDefaultFunction();
-
+import websiteNavigation from "./modules/navigation"; 
+websiteNavigation(cssBreakpoints);
