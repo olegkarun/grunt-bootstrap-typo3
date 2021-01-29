@@ -9,13 +9,13 @@
 
 !/.gitignore
 !/src
-!/src/**/*
+/src/js/icons.js
 !/index.html
 !/html/
 
 !/package.json
-!/webpack.config.js
-!/webpack.config(2).js
+!/Gruntfile.js
 !/package-lock.json
 !/postcss.config.js
+!/grunt
 !/README.md

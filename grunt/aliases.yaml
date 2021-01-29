@@ -1,0 +1,20 @@
+default:
+ description: 'default - Develop task list'
+ tasks:
+  - dev
+dev:
+ description: 'Develop task list'
+ tasks:
+  - 'concurrent:icons'
+  - 'concurrent:development'
+  - watch
+prod:
+ description: 'Stage task lists'
+ tasks:
+  - 'concurrent:icons'     
+  - 'concurrent:production'
+server:
+ description: 'Run server for frontend developer'
+ tasks:
+  - connect
+  - watch
