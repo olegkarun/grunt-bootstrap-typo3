@@ -4,14 +4,13 @@
 $fa-font-size-base:   22px;
 
 $fa-line-height-base: 1 !default;
-//$fa-font-path:        "../../../node_modules/font-awesome/fonts/";
-$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default; // for referencing Bootstrap CDN font files directly
+$fa-font-path:        "../fonts";
 $fa-css-prefix:       fa !default;
 $fa-version:          "4.7.0" !default;
 $fa-border-color:     #eee !default;
 $fa-inverse:          #fff !default;
 $fa-li-width:         (30em / 14) !default;  
-
+ 
 
 @import "font-awesome/scss/variables";
 @import "font-awesome/scss/mixins";

@@ -7,10 +7,12 @@
         },
         // Task for dev
         development: [
+            'copy:static',
             'sass:dev'
         ],
         // Tasks for prod
         production: [
+            'copy:static',
             'sass:prod'
         ],
         

@@ -2,13 +2,14 @@
     'use strict';
 
     var     templatesSourcePath = './html/',
-            scriptsSourcePath = './js/',
-            stylesSourcePath = './scss/',
-            svgSourcePath = './svg/';
+            scriptsSourcePath = './src/js/',
+            stylesSourcePath = './src/scss/',
+            svgSourcePath = './src/svg/';
 
     module.exports = {
         
         options: {
+            spawn: false,
             livereload: true
         },
         
@@ -19,9 +20,6 @@
         },
         
         styles: {
-            options:{
-                spawn: false
-            },
             files: [
                 stylesSourcePath + '**/*.scss'
             ],

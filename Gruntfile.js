@@ -5,7 +5,10 @@
         require('time-grunt')(grunt);
         
         require('load-grunt-config')(grunt, {
-            jitGrunt: true
+            jitGrunt: true,
+            staticMappings: {
+                copy: 'grunt-contrib-copy'
+            } 
         });
     };
 }
