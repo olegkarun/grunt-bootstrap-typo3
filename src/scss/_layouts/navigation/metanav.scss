@@ -18,7 +18,8 @@
         @include media-breakpoint-down(md) {
             margin-left: 0;
             margin-right: 0;
-            margin-bottom: 9px;
+            margin-bottom: 1rem;
+            display: flex;
         }
 
         &:last-child {

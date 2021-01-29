@@ -4,7 +4,11 @@
         margin: 0;
         list-style: none;
         display: block;
-
+        
+        @include media-breakpoint-up(lg) {
+            margin-bottom: $navigation-spacer;
+        }
+        
         &-item{
             display: block;
         }
@@ -58,11 +62,13 @@
 
         //additional custom styles for links by level
         &.first-level{ 
-            margin-bottom: $navigation-spacer;
+
 
             & > li {
                 > .nav-controls{
-                    margin-bottom:$navigation-spacer;
+                    @include media-breakpoint-up(lg) {
+                        margin-bottom:$navigation-spacer;
+                    }
 
                     //if link
                     >  a{
@@ -120,12 +126,11 @@
                 }
 
             }
-            margin-bottom: $navigation-spacer;
+
         }
 
         &.third-level{
             padding-left: 10px;
-            margin-bottom: $navigation-spacer;
         }
     }
 }

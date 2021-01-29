@@ -1,9 +1,11 @@
 @include media-breakpoint-down(md) {
-    #navbar{
+    .website-header{
         .navbar {
 
             &-content{
-
+                
+                
+                
                 &.collapsing {
                     -webkit-transition: none;
                     transition: none;
@@ -18,9 +20,13 @@
                 bottom: 0;
                 background-color: $brand-gray-light;
                 padding-top: $navigation-spacer;
+                //scroll logic
                 overflow-y: scroll;
                 @include custom-scroll;
-
+                height:auto;
+                padding-bottom: $navigation-spacer*2;
+                //end scroll logic
+                
                 &-flexwrap {
                     // switch nav elements
                     flex-direction: column;
@@ -32,42 +38,46 @@
 
             &-nav {
                 order: -1;
+                margin-bottom: $navigation-spacer;
 
-                //root level transformation
-                & > .nav-item{
+                .nav{
 
-                    display: block;
-                    padding-top: 20px;
-                    padding-bottom: 10px;
-                    border-bottom: 1px solid $brand-gray;
+                    //root level transformation
+                    &-item{
 
-                    &:first-child {
-                        border-top: 1px solid $brand-gray;
+                        display: block;
+                        padding-top: $navigation-spacer/2;
+                        padding-bottom: $navigation-spacer/2;
+                        border-bottom: 1px solid $brand-gray;
+
+                        &:first-child {
+                            border-top: 1px solid $brand-gray;
+                        }
+
+                        &.icon-search{
+                            display: none;
+                        }
+
                     }
 
-                    & > .nav-link{
+                    &-link{
                         display: inline-block;
                         font-size: $font-size-lg;
                         color: $brand-red;
                         padding-top: 0;
-                        padding-bottom: 20px;
+                        padding-bottom: 0;
+                        //add toggler link spcaer
+                        padding-right: $navigation-spacer;
                         width: 100%;
-                        padding-bottom: $navigation-spacer;
                     }
 
+                    //END root level transformation
 
-                }
-
-
-
-                //END root level transformation
-
-
-                .nav{
                     //custom logic of first nav level - show submenu on click
-                    &-controls{
 
 
+                    &-container{
+                        padding: 0;
                     }
 
                     &-dropdown{
@@ -75,8 +85,40 @@
                             display: none;
                         }
                     }
+                }
 
+                .subnav {
+                    padding-top: $navigation-spacer/2;
+                    &-item{
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                    }
+                    
+                    //add toggler link spcaer
+                    .nav-controls{
+                        padding-right: $navigation-spacer;
+                    }
+                    
+                    &.second-level{
+                        .subnav{
+                            
+                            &-item{
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                            }
+                        }
+                    }
 
+                    &.third-level{
+                        padding-top: 10px;
+                        .subnav{
+                            &-item{
+                                //@todo agree with designer - should be more space for finger click
+                                padding-top: 0px;
+                                padding-bottom: 0px;
+                            }
+                        }  
+                    }
                 }
             }
 

@@ -15,7 +15,7 @@
     @include media-breakpoint-up(lg) {
         > .nav-item{
             margin-left: 10px;
-            
+
             & > .nav-controls{
                 position: relative;
                 .nav-toggler{
@@ -32,15 +32,15 @@
                     transition: color 0.15s ease-in-out;
                     position: relative;
                     letter-spacing: 0.35px;
-                    
+
                     &.active {
                         &::after {
                             content: "";
                             display: block;
                             position: absolute;
                             bottom: 0;
-                            left: 0;
-                            width: 100%;
+                            left: $nav-link-padding-y;
+                            right: $nav-link-padding-y;
                             height: 2px;
                             background-color: $brand-red;
                         }
@@ -90,7 +90,6 @@
 
         // top level dropdown
         &-dropdown{
-            padding-top: $navigation-spacer/2;
 
             @include media-breakpoint-up(lg) {
                 position: fixed;
@@ -127,8 +126,6 @@
 
             //columns
             &-content{
-                background: pink;
-
                 //split by column if more then 2 levels with class .simple - off
                 @include media-breakpoint-up(lg) {
                     &:not(.simple){
@@ -147,6 +144,10 @@
                 }
             }
             //end columns
+        }
+        
+        &-container{
+            padding-top: $navigation-spacer/2;
         }
     }
 }

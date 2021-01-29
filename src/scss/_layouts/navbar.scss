@@ -6,13 +6,11 @@ $navigation-spacer: 40px;
     flex-direction: column;
 }
 
-#navbar {
+.website-header {
     .navbar {
         height: 100%;
         padding-top: $spacer * 1.5;
         padding-bottom: $spacer;
-
-
 
         // root collapser
         &-content {

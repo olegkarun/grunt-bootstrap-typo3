@@ -70,13 +70,13 @@ module.exports = (env, argv) => {
     };
 
     const entries = {
-      "app": "./js/app.js",
-      "svg": "./js/svg.js",
+        "app": "./js/app.js",
+        "svg": "./js/svg.js",
     }
 
     if (!isDevMode) {
-      cssLoaders.splice(2, 0, postCssLoader);
-      entries["rte"] = "./scss/rte.scss"; 
+        cssLoaders.splice(2, 0, postCssLoader);
+        entries["rte"] = "./scss/rte.scss";
     }
 
     let config = {
@@ -87,9 +87,8 @@ module.exports = (env, argv) => {
         mode: isDevMode ? 'development' : 'production',
 
         stats: {
-            warnings:false
+            warnings: false
         },
-        
 
         performance: {
             hints: false,
@@ -108,7 +107,12 @@ module.exports = (env, argv) => {
             compress: true,
             hot: true,
             historyApiFallback: {index: 'index.html'},
-            contentBase: path.join(__dirname, 'dist')
+            contentBase: path.join(__dirname, 'dist'),
+       
+            allowedHosts: [
+                'localhost',
+                'wtg.typozone.pro'
+            ]
         },
 
         // entry files to compile (relative to the base dir)
@@ -136,6 +140,7 @@ module.exports = (env, argv) => {
             }),
 
             new HtmlWebpackPlugin({
+                hash: true,
                 filename: 'index.html',
                 template: '../index.html',
                 title: "Project Name",
@@ -193,7 +198,6 @@ module.exports = (env, argv) => {
 
                     use: cssLoaders
                 },
-
 
                 // js loader
                 {
@@ -270,7 +274,7 @@ module.exports = (env, argv) => {
                                 outputPath: "./fonts/",
                                 emitFile: true,
                                 esModule: false
-                           }
+                            }
                         },
                     ],
                 },
