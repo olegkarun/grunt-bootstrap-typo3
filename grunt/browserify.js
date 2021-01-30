@@ -23,10 +23,24 @@
                     'exorcist' //Move Browserify source maps to a separate file using Exorcist
                 ]
             }
-        }
+        },
 
         // Stage process Js compile
-
+        prod: {
+            files: {
+                '<%= global.distPath %>/js/app.min.js': '<%= global.srcPath %>/js/app.js'
+            },
+            options: {
+                browserifyOptions: {debug: false},
+                transform: [
+                    [
+                        "babelify", {
+                            "presets": ["@babel/preset-env"]}
+                    ],
+                    'uglifyify'
+                ]
+            }
+        }
 
     };
 

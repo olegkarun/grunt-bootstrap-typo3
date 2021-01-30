@@ -9,7 +9,7 @@
 module.exports = {
     icons: {
         files: {
-            './src/js/sprite.js': ['./dist/svg/sprite.svg']
+            '<%= global.distPath %>/js/sprite.min.js': ['<%= global.distPath %>/svg/sprite.svg']
         },
         options: {
             container: '#svg-icons'

@@ -1,9 +1,9 @@
 (function () {
     
     var templatesSourcePath = './html/',
-            scriptsSourcePath = './src/js/',
-            stylesSourcePath = './src/scss/',
-            svgSourcePath = './src/svg/';
+            scriptsSourcePath = '<%= global.srcPath %>/js/',
+            stylesSourcePath = '<%= global.srcPath %>/scss/',
+            svgSourcePath = '<%= global.srcPath %>/svg/';
 
     module.exports = {
 

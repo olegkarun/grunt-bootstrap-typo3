@@ -13,7 +13,7 @@ prod:
  tasks:
   - 'concurrent:sprite'     
   - 'concurrent:production'
-  - 'postcss:prod'
+  - 'concurrent:minify'
 server:
  description: 'Run server for frontend developer'
  tasks:

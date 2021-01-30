@@ -14,11 +14,11 @@
                 map: true
             },
 
-            cwd: './dist/css/',
+            cwd: '<%= global.distPath %>/css/',
             src: '*.css',
-            dest: './dist/css/',
+            dest: '<%= global.distPath %>/css/',
             expand: true,
-            ext: '.css'
+            ext: '.min.css'
 
         },
         
@@ -26,15 +26,15 @@
             options: {
                 map: false,
                 processors: [
-                    require('autoprefixer')({overrideBrowserslist: 'last 2 versions, Safari 8'}),  // add vendor prefixes
+                    require('autoprefixer')(),  // add vendor prefixes
                     require('cssnano')() // minify the result
                 ]
             },
-            cwd: './dist/css/',
+            cwd: '<%= global.distPath %>/css/',
             src: '*.css',
-            dest: './dist/css/',
+            dest: '<%= global.distPath %>/css/',
             expand: true,
-            ext: '.css'
+            ext: '.min.css'
         }
 
     };

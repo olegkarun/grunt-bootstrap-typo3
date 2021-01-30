@@ -10,12 +10,21 @@
             'copy:static',
             'sass:dev'
         ],
+        
         // Tasks for prod
         production: [
             'copy:static',
-            'sass:prod'
+            'sass:prod',
+            'browserify:prod'
         ],
         
+        // AutoPrefixer and Uglify
+        minify: [
+          'postcss:prod',
+          'uglify:prod'    
+        ],
+        
+        // Build sprite and JS iject
         sprite: [
             'svgstore',
             'svginjector'

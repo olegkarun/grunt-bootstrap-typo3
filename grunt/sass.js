@@ -12,8 +12,8 @@
     var compass = require('compass-importer');
 
     var listFiles = {
-        './dist/css/app.css': './src/scss/app.scss',
-        './dist/css/rte.css': './src/scss/rte.scss'
+        '<%= global.distPath %>/css/app.min.css': '<%= global.srcPath %>/scss/app.scss',
+        '<%= global.distPath %>/css/rte.min.css': '<%= global.srcPath %>/scss/rte.scss'
     };
 
 
@@ -26,7 +26,7 @@
                 includePaths: ['./node_modules'],
                 sourceComments: false,
                 sourceMapEmbed: true,
-                sourceMapRoot: "./dist/css/",
+                sourceMapRoot: "<%= global.distPath %>/css/",
                 sourceMap: true,
                 importer: compass,
                 implementation: sass            
