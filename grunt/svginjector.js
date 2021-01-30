@@ -12,7 +12,7 @@ module.exports = {
             './src/js/sprite.js': ['./dist/svg/sprite.svg']
         },
         options: {
-            container: '.svg-icons'
+            container: '#svg-icons'
         }
     }
 };

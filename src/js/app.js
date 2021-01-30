@@ -1,4 +1,8 @@
+//  root import jQuery and Popper, Bootstrap 
+import jQuery from "jquery";
+window.$ = window.jQuery = jQuery;
 import 'bootstrap';
+
 
 /** import of export */
 import {testArrowFunction, testFunctionDeclaration} from "./modules/example.js"
@@ -13,12 +17,10 @@ global.cssBreakpoints = cssBreakpoints;
 /*
  * ### services ####
  */
-import svginject from './services/svginject.js';
 import AOSInitFunction from './services/aos.js';  
 import './services/lazysizes.js'; 
 import './services/videojs.js'; 
 
-svginject(projectPath+'/img/icons.svg'); 
 AOSInitFunction(cssBreakpoints);
 
 

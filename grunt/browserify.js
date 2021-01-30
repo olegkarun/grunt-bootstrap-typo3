@@ -8,25 +8,19 @@
 
         // Development process JS compile
         dev: {
-            src: [
-                "./src/js/app.js",
-                "./src/js/sprite.js" //<!-- example how get separate file
-            ],
-            
-            dest: './dist/js/app.js',
+            files: {
+                '<%= global.distPath %>/js/app.min.js': '<%= global.srcPath %>/js/app.js'
+            },
             options: {
                 browserifyOptions: {debug: true},
-                transform: [["babelify", {"presets": ["@babel/preset-env"]}]],
-                //<!-- example how get separate file
-                plugin: [
+                transform: [
                     [
-                        "factor-bundle", {
-                            outputs: [
-                                "./dist/js/app.js",
-                                "./dist/js/sprite.js"
-                            ]
-                        }
+                        "babelify", {
+                            "presets": ["@babel/preset-env"]}
                     ]
+                ],
+                plugin: [
+                    'exorcist' //Move Browserify source maps to a separate file using Exorcist
                 ]
             }
         }
