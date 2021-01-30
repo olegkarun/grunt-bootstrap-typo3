@@ -12,6 +12,7 @@
 /src/js/sprite.js
 !/index.html
 !/html/
+!.htaccess
 
 !/package.json
 !/Gruntfile.js

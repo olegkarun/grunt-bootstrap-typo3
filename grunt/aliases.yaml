@@ -18,6 +18,9 @@ server:
  description: 'Run server for frontend developer'
  tasks:
   - connect
+  - 'concurrent:development'
+  - 'concurrent:sprite'
+  - ssi
   - watch
   
 sprite:

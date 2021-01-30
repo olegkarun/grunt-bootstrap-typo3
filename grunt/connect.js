@@ -15,7 +15,7 @@
                 bases: ['.'],
                 livereload: true,
                 open: {
-                    target: "http://wtg.typozone.pro:8081/html/"
+                    target: "http://wtg.typozone.pro:8081/dist/"
                 }
             }
         },
@@ -27,7 +27,9 @@
                 port: 8080,
                 bases: ['.'],
                 livereload: true,
-                open: true
+                open: {
+                    target: "http://localhost/dist/"
+                }
             }
         }
 

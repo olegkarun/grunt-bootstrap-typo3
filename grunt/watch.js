@@ -14,8 +14,11 @@
 
         html: {
             files: [
-                templatesSourcePath + '*.html'
-            ]
+                templatesSourcePath + '**/*.html'
+            ],
+            tasks: [
+                'ssi:server'
+            ]            
         },
 
         js: {
