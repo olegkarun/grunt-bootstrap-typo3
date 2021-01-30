@@ -11,13 +11,19 @@
     var sass = require('node-sass');
     var compass = require('compass-importer');
 
+    var listFiles = {
+        './dist/css/app.css': './src/scss/app.scss',
+        './dist/css/rte.css': './src/scss/rte.scss'
+    };
+
+
     module.exports = {
 
         // Development process SASS compile
         dev: {
             options: {
                 outputStyle: "nested", //addinional expanded
-                includePaths: ['./node_modules/'],
+                includePaths: ['./node_modules'],
                 sourceComments: false,
                 sourceMapEmbed: true,
                 sourceMapRoot: "./dist/css/",
@@ -25,25 +31,20 @@
                 importer: compass,
                 implementation: sass            
             },
-            files: { 
-                './dist/css/style.css': './src/scss/style.scss',
-                './dist/css/rte.css': './src/scss/rte.scss'
-            }
+            files: listFiles
         },
 
         // Stage process SASS compile
         prod: {
             options: {
                 outputStyle: "compressed", //addinional compact
+                includePaths: ['./node_modules'],
                 sourceComments: false,
                 sourceMap: false,
                 importer: compass,
                 implementation: sass
             },
-            files: {
-                './dist/css/style.css': './scss/style.scss',
-                './dist/css/rte.css': './scss/rte.scss'
-            }
+            files: listFiles
         }
     };
 }

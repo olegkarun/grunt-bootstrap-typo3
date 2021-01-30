@@ -5,16 +5,23 @@ default:
 dev:
  description: 'Develop task list'
  tasks:
-  - 'concurrent:icons'
+  - 'concurrent:sprite'
   - 'concurrent:development'
   - watch
 prod:
  description: 'Stage task lists'
  tasks:
-  - 'concurrent:icons'     
+  - 'concurrent:sprite'     
   - 'concurrent:production'
+  - 'postcss:prod'
 server:
  description: 'Run server for frontend developer'
  tasks:
   - connect
   - watch
+  
+sprite:
+ description: 'Build SVG sprite and JS injectiion file'
+ tasks:
+  - svgstore
+  - svginjector

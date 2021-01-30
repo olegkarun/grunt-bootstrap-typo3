@@ -9,7 +9,7 @@
 module.exports = {
     icons: {
         files: {
-            './src/js/icons.js': ['./dist/svg/icons.svg']
+            './src/js/sprite.js': ['./dist/svg/sprite.svg']
         },
         options: {
             container: '.svg-icons'

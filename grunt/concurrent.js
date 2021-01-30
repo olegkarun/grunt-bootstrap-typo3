@@ -16,7 +16,7 @@
             'sass:prod'
         ],
         
-        icons: [
+        sprite: [
             'svgstore',
             'svginjector'
         ]

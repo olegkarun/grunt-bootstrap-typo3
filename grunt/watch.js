@@ -1,22 +1,30 @@
 (function () {
-    'use strict';
-
-    var     templatesSourcePath = './html/',
+    
+    var templatesSourcePath = './html/',
             scriptsSourcePath = './src/js/',
             stylesSourcePath = './src/scss/',
             svgSourcePath = './src/svg/';
 
     module.exports = {
-        
+
         options: {
             spawn: false,
             livereload: true
         },
-        
-        html:{
+
+        html: {
             files: [
                 templatesSourcePath + '*.html'
-            ]  
+            ]
+        },
+
+        js: {
+            files: [
+                scriptsSourcePath + '**/*.js'
+            ],
+            tasks: [
+                'browserify:dev'
+            ]
         },
         
         styles: {
@@ -27,11 +35,11 @@
                 'sass:dev'
             ]
         },
-        
-        svg: {
+
+        sprite: {
             files: [
                 svgSourcePath + '*.svg'
-                
+
             ],
             tasks: [
                 'svgstore',

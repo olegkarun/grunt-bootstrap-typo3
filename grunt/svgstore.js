@@ -3,7 +3,7 @@
 module.exports = {
     icons: {
         files: {
-            './dist/svg/icons.svg': ['./src/svg/*.svg']
+            './dist/svg/sprite.svg': ['./src/svg/*.svg']
         },
         options: {
             prefix: 'icon-', // This will prefix each ID

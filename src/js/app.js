@@ -1,4 +1,3 @@
-import '../scss/app.scss';  
 import 'bootstrap';
 
 /** import of export */

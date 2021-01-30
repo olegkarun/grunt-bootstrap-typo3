@@ -9,7 +9,7 @@
 
 !/.gitignore
 !/src
-/src/js/icons.js
+/src/js/sprite.js
 !/index.html
 !/html/
 

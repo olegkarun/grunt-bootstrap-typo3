@@ -1,6 +1,7 @@
 /* 
  * allow see html chnages without page reloading
- * https://github.com/gruntjs/grunt-contrib-connect
+ * Documents https://github.com/gruntjs/grunt-contrib-connect
+ * Examples https://github.com/gruntjs/grunt-contrib-connect/blob/master/docs/connect-examples.md
  */
 
 (function () {
@@ -29,7 +30,6 @@
                 open: true
             }
         }
-
 
     };
 }
