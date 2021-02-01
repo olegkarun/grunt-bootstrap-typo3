@@ -10,7 +10,7 @@ import 'lazysizes/plugins/respimg/ls.respimg';
 lazySizes.cfg.customMedia = {
     '--xs': '(max-width: 480px)',
     '--sm': '(max-width: 992px)',
-    '--md': '(max-width: 1200px)' 
+    '--md': '(max-width: 1280px)' 
 };  
 
 function loadJS(u){

@@ -1,0 +1,50 @@
+
+.footer-social {
+  &-item {
+    &:first-child {
+      .footer-social-link {
+        padding-left: 0;
+      }
+    }
+
+    &:last-child {
+      .footer-social-link {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &-link {
+    padding: 0 17px;
+
+    .fa-instagram {
+      @include hover {
+        color: #c32aa3;
+      }
+    }
+
+    .fa-facebook {
+      @include hover {
+        color: #3b5998;
+      }
+    }
+
+    .fa-linkedin {
+      @include hover {
+        color: #0077b5;
+      }
+    }
+
+    .fa-xing {
+      @include hover {
+        color: #026466;
+      }
+    }
+
+    .fa-twitter {
+      @include hover {
+        color: #1DA1F2;
+      }
+    }
+  }
+}

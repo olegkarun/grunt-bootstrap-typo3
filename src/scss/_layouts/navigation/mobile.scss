@@ -1,0 +1,127 @@
+@include media-breakpoint-down(md) {
+    .website-header{
+        .navbar {
+
+            &-content{
+                
+                
+                
+                &.collapsing {
+                    -webkit-transition: none;
+                    transition: none;
+                    display: block;
+                    height: 100%;
+                }
+
+                position: fixed;
+                top: 94px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $brand-gray-light;
+                padding-top: $navigation-spacer;
+                //scroll logic
+                overflow-y: scroll;
+                @include custom-scroll;
+                height:auto;
+                padding-bottom: $navigation-spacer*2;
+                //end scroll logic
+                
+                &-flexwrap {
+                    // switch nav elements
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+
+
+            }
+
+            &-nav {
+                order: -1;
+                margin-bottom: $navigation-spacer;
+
+                .nav{
+
+                    //root level transformation
+                    &-item{
+
+                        display: block;
+                        padding-top: $navigation-spacer/2;
+                        padding-bottom: $navigation-spacer/2;
+                        border-bottom: 1px solid $brand-gray;
+
+                        &:first-child {
+                            border-top: 1px solid $brand-gray;
+                        }
+
+                        &.icon-search{
+                            display: none;
+                        }
+
+                    }
+
+                    &-link{
+                        display: inline-block;
+                        font-size: $font-size-lg;
+                        color: $brand-red;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        //add toggler link spcaer
+                        padding-right: $navigation-spacer;
+                        width: 100%;
+                    }
+
+                    //END root level transformation
+
+                    //custom logic of first nav level - show submenu on click
+
+
+                    &-container{
+                        padding: 0;
+                    }
+
+                    &-dropdown{
+                        &-panel{
+                            display: none;
+                        }
+                    }
+                }
+
+                .subnav {
+                    padding-top: $navigation-spacer/2;
+                    &-item{
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                    }
+                    
+                    //add toggler link spcaer
+                    .nav-controls{
+                        padding-right: $navigation-spacer;
+                    }
+                    
+                    &.second-level{
+                        .subnav{
+                            
+                            &-item{
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                            }
+                        }
+                    }
+
+                    &.third-level{
+                        padding-top: 10px;
+                        .subnav{
+                            &-item{
+                                //@todo agree with designer - should be more space for finger click
+                                padding-top: 0px;
+                                padding-bottom: 0px;
+                            }
+                        }  
+                    }
+                }
+            }
+
+        }
+    }
+}

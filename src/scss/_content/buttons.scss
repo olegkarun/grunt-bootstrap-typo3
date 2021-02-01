@@ -1,0 +1,26 @@
+//wtg_buttons
+
+.cta-layout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .lead{
+        margin: 0.85rem 2rem;
+    }
+
+    .btn{
+        white-space: nowrap;
+    }
+
+    @include media-breakpoint-down(md) {
+        display: block;
+        text-align: center;
+
+        .lead{
+            margin: 0 0 2rem 0;
+        }
+
+    }
+} 
+

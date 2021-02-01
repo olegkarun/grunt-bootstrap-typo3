@@ -1,0 +1,27 @@
+.footer-menu {
+  &-heading {
+    font-size: rem(16px);
+    letter-spacing: rem(0.4px);
+    padding-bottom: 9px;
+    display: inline-block;
+    color: $black;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  &-list {
+    list-style-type: none;
+    padding-left: 0;
+    padding-bottom: 24px;
+    margin-bottom: 0;
+  }
+
+  &-link {
+    font-size: rem(14px);
+    letter-spacing: rem(0.35px);
+    line-height: rem(36px);
+    color: $brand-gray-dark;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+}

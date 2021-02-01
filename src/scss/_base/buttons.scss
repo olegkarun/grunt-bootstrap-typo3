@@ -1,28 +1,22 @@
-$btn-icon-gutter: 5px;
+$btn-icon-gutter: 10px;
 
-//custom type of button
-.btn-link{
-    color: $body-color;
-    padding: 0;
-    
-    @include hover() {
-        text-decoration: none;
-        color: $body-color;
-        svg{
-            fill: $body-color;;
-        }
+button{
+    &:hover, &:active, &:focus{
+        outline: 0;
     }
 }
+
+
 
 //outline buttons modification
 @each $color, $value in $theme-colors {
     .btn.btn-outline-#{$color} {
         svg{
-            fill: $value;
+            stroke: $value;
         }
-        @include hover() {
+        &:hover, &:active{
             svg{
-                fill: color-yiq($value);
+                stroke: color-yiq($value);
             }
         }
     } 
@@ -32,50 +26,137 @@ $btn-icon-gutter: 5px;
 @each $color, $value in $theme-colors {
     .btn.btn-#{$color} {
         svg{
-            fill: color-yiq($value);
+            stroke: color-yiq($value);
         }
-        @include hover() {
+        &:hover, &:active{
             svg{
-                fill: color-yiq($value);
+                stroke: color-yiq($value);
             }
         }
     }
 }
 
+.btn-primary{
+    &:hover, &:active{
+        background: $brand-red-dark;
+    }
+}
+
+.btn-secondary{
+    &:hover, &:active{
+        background: $brand-gray;
+    }
+}
+
+.btn-secondary-outline{
+    color: $body-color;
+}
 
 
 //buton icon logic
 
 .btn{
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.4px;
+
     svg{
-        max-width: 20px;
-        max-height: 20px;
-        @include transition(all 0.15s ease-in-out, left 0.15s ease-in-out, right 0.15s ease-in-out); //check $btn-transition
+        @include transition(stroke 0.15s ease-in-out, left 0.15s ease-in-out, right 0.15s ease-in-out); //check $btn-transition
+        &.icon{
+            margin-left: $btn-icon-gutter;
+        }
     }
-    &:focus, &:active{
+
+    &:focus, &:active, &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active,
+        .show > &.dropdown-toggle {
         outline:0; 
         box-shadow: none;
     }   
 
     .arrow-right, .arrow-left{
         position: relative;
+        width: 22px;
+        height: 16px
     }
+
     .arrow-right{
         margin-left: $btn-icon-gutter;
         right:0;
     }
     .arrow-left{
+        margin-left: 0;
         margin-right: $btn-icon-gutter;
         left:0;
     } 
-    @include hover(){
-        .arrow-right{
-            right: - $btn-icon-gutter;
+
+
+    &.btn-lg{
+        font-weight: $font-weight-bold;
+
+        .arrow-right, .arrow-left{
+            width: 32px;
+            height: 23px;
         }
-        .arrow-left{
-            left: - $btn-icon-gutter;
+        &.icon{
+            margin-left: $btn-icon-gutter * 1.5;
         }
     }
+
+    //animation
+    &:hover, &:active{
+        .arrow-right{
+            right: - $btn-icon-gutter/2;
+        }
+        .arrow-left{
+            left: - $btn-icon-gutter/2;
+        }
+    }
+
 } 
+
+@each $color, $value in $theme-colors {
+    .btn-link-#{$color} {
+        color: $value;
+        stroke: $value;
+        padding: 0;
+        border:0;
+        svg{
+            stroke: $value;
+        }
+        &:hover, &:active{
+            color: $value;
+            svg{
+                stroke: $value;
+            }
+        }
+    } 
+}
+
+//custom type of button
+.btn-link{
+    color: $body-color;
+    padding: 0;
+    border:0;
+    stroke: $body-color;
+
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+        color: $body-color;
+        svg{
+            stroke: $body-color;
+            margin-left: $btn-icon-gutter;
+        }
+    }
+}
+
+.btn-link-primary{
+    @include hover-focus-active{
+        color: $brand-red-dark;
+        svg{
+            stroke: $brand-red-dark;
+        }
+    }
+}

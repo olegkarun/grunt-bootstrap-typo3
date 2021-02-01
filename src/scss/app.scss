@@ -1,6 +1,7 @@
 @import "_mixin/rem"; //for rem - px converting
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 
 // Your custom variables should be here
 @import "_custom/variables.scss"; // bootsrap variables overrides
@@ -10,7 +11,8 @@
 
 @import "_mixin/import";
 @import "_base/import"; //typograph and global styles
-@import "_custom/import";  //bootsrrap overrides
+@import "_custom/import";  //bootstrap overrides [variables]
 @import "_components/import"; //some components styles like videoJS, Slick.JS, ...
 @import "_layouts/import"; //page style /header / footer /navigation
-@import "_content/import"; //content elements style 
+@import "_content/import"; //content elements style  
+ 

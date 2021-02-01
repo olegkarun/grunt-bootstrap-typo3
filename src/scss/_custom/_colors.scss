@@ -1,5 +1,11 @@
 //use custom colors with prefix '$brand'
-$brand-blue: blue;
+$white: #ffffff;
+$brand-gray-light: #f4f4f4;
+$brand-gray: #b9b9b9;
+$brand-gray-dark: #585858;
+$brand-red: #db0d15;
+$brand-red-dark: #961108;
+
 
 
 // Color system
@@ -43,7 +49,7 @@ $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
-$colors: () !default;
+$colors: ();
 $colors: map-merge(
   (
     "blue":       $blue,
@@ -63,8 +69,9 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
+$primary:       $brand-red;
+$secondary:     $brand-gray-light;
+
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -72,7 +79,7 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
-$theme-colors: () !default;
+$theme-colors: () ;
 $theme-colors: map-merge(
   (
     "primary":    $primary,
@@ -88,14 +95,14 @@ $theme-colors: map-merge(
 );
 
 // Set a specific jump point for requesting color jumps
-$theme-color-interval:      8% !default;
+$theme-color-interval:      10%;
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold:  150 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark:             $gray-900 !default;
-$yiq-text-light:            $white !default;
+$yiq-text-dark:             $black;
+$yiq-text-light:            $white;
 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (
@@ -105,3 +112,7 @@ $escaped-characters: (
   ("(", "%28"),
   (")", "%29"),
 ) !default;
+
+
+
+$body-color: $black;

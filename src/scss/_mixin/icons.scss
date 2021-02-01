@@ -1,0 +1,167 @@
+@function url-friendly-colour($colour) {
+    @return '%23' + str-slice('#{$colour}', 2, -1)
+}
+
+@mixin svgicons($color, $type) {
+    @if ($type == 'right-arrow') {
+        background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='#{$color}' width='22' height='15' viewBox='0 0 22 15'%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath fill='none' stroke-miterlimit='20' stroke-width='2' d='M13.736 2.421v0l6.078 5.236v0l-6.078 5.235v0z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='none' stroke-linecap='square' stroke-miterlimit='20' stroke-width='2' d='M13.5 8h-12'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"));
+    }
+    @if ($type == 'left-arrow') {
+        background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' stroke='#{$color}' height='15' viewBox='0 0 21 15'%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath fill='none' stroke-miterlimit='20' stroke-width='2' d='M7.578 12.892v0L1.5 7.657v0L7.578 2.42v0z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='none' stroke-linecap='square' stroke-miterlimit='20' stroke-width='2' d='M7.813 7.314h12'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"));
+    }
+    @if ($type == 'list-check') {
+        background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='17' viewBox='0 0 21 17'%3E%3Cg%3E%3Cg%3E%3Cpath fill='none' stroke='#{$color}' stroke-miterlimit='20' stroke-width='2' d='M19.883.613v0L7.646 14.916v0L1.01 7.261v0'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"));
+    }
+    @if ($type == 'play-video') {
+        background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='#{$color}' width='26' height='44' viewBox='0 0 26 44'%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath fill='none' stroke-miterlimit='20' stroke-width='3' d='M1.834 3.475v0L23.118 21.81v0L1.834 40.142v0z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"));
+    }
+    @if ($type == 'close') {
+        background-image: escape-svg(url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='SVGDoc' width='31' height='31' xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:avocode='https://avocode.com/' viewBox='0 0 31 31'%3E%3Cdefs%3E%3C/defs%3E%3Cdesc%3EGenerated with Avocode.%3C/desc%3E%3Cg%3E%3Cg%3E%3Ctitle%3EOval%3C/title%3E%3Cpath d='M0,15.5c0,-8.56041 6.93959,-15.5 15.5,-15.5c8.56041,0 15.5,6.93959 15.5,15.5c0,8.56041 -6.93959,15.5 -15.5,15.5c-8.56041,0 -15.5,-6.93959 -15.5,-15.5z' fill='#{$color}' fill-opacity='1'%3E%3C/path%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELine%3C/title%3E%3Cpath d='M21.31371,20.81371l-11.31371,-11.31371' fill-opacity='0' fill='%23ffffff' stroke-dashoffset='0' stroke-linejoin='miter' stroke-linecap='square' stroke-opacity='1' stroke='%23ffffff' stroke-miterlimit='20' stroke-width='2'%3E%3C/path%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELine%3C/title%3E%3Cpath d='M10,20.81371l11.31371,-11.31371' fill-opacity='0' fill='%23ffffff' stroke-dashoffset='0' stroke-linejoin='miter' stroke-linecap='square' stroke-opacity='1' stroke='%23ffffff' stroke-miterlimit='20' stroke-width='2'%3E%3C/path%3E%3C/g%3E%3Cg%3E%3Ctitle%3EIcons/Close%3C/title%3E%3Cg%3E%3Ctitle%3ELine%3C/title%3E%3Cpath d='M10,20.81371l11.31371,-11.31371' fill-opacity='0' fill='%23ffffff' stroke-dashoffset='0' stroke-linejoin='miter' stroke-linecap='square' stroke-opacity='1' stroke='%23ffffff' stroke-miterlimit='20' stroke-width='2'%3E%3C/path%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELine%3C/title%3E%3Cpath d='M21.31371,20.81371l-11.31371,-11.31371' fill-opacity='0' fill='%23ffffff' stroke-dashoffset='0' stroke-linejoin='miter' stroke-linecap='square' stroke-opacity='1' stroke='%23ffffff' stroke-miterlimit='20' stroke-width='2'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"));
+    }
+ 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#svg-icons {
+    opacity: 0;
+    float: left;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    bottom:0;
+    left: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+// icon css sprite
+
+.iconset-example{
+    display: flex;
+    .icon{
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+.form-checkbox{
+    width: 14px; 
+    height:11px;
+}
+
+.form-selectbox-caret{
+    width: 13px; 
+    height:20px;
+}
+.icon-blockquote{
+    width: 61px; 
+    height:50px;
+}
+
+.icon-budget-new{
+    width: 31px; 
+    height:14px;
+}
+.icon-chat{
+    width: 44px; 
+    height:34px;
+}
+
+.icon-close{
+    width: 20px; 
+    height:20px;
+}
+
+.icon-collapse-off{
+    width: 20px;
+    height:20px;
+}
+.icon-collapse-on{
+    width: 20px; 
+    height:20px;
+}
+
+.icon-conversation{
+    width: 22px; 
+    height:24px;
+}
+
+.icon-download{
+    width: 18px; 
+    height:24px;
+}
+
+.icon-email{
+    width: 18px; 
+    height: 14px;
+}
+
+.icon-external-link{
+    width: 20px; 
+    height:20px;
+}
+
+.icon-left-arrow, .icon-right-arrow{
+    width: 22px; 
+    height:15px;
+    &.lg{
+        width: 32px; 
+        height:23px;
+    }
+}
+
+.icon-list-check{
+    width: 40px; 
+    height:40px;
+}
+
+.icon-load-more{
+    width: 24px; 
+    height:26px;
+}
+
+.icon-look-out{
+    width: 22px; 
+    height:15px;
+}
+
+.icon-phone{
+    width: 20px; 
+    height:22px;
+}
+
+.icon-play-video{
+    width: 26px; 
+    height:44px;
+}
+
+.icon-search{
+    width: 22px; 
+    height:24px;
+    &.lg{
+        width: 30px; 
+        height:33px;
+    }
+}
+.icon-send-email{
+    width: 40px; 
+    height:15px;
+}
+
+.icon-upload{
+    width: 20px; 
+    height:24px;
+}
+
+.icon-user{
+    width: 18px; 
+    height:21px;
+}
+
+.icon{
+    stroke: $black; 
+    &.red-stroke{
+        stroke: $brand-red;
+    }
+}

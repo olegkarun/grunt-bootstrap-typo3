@@ -4,11 +4,11 @@
     width: 100%;
 }
 
-h1, .h1{
-    
+h1, .h1{  
 }
 
 h2, .h2{
+    
 }
 
 h3, .h3{
@@ -25,4 +25,14 @@ hr{
     border-top-width: 5px;
     border-top-color: $gray-200;
     margin: 40px 0 40px 0; 
+}
+
+.above-header{
+    @include smallcapital($brand-red);
+}
+
+.lead{
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.33px;
 }

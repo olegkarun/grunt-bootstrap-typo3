@@ -8,17 +8,18 @@
     &:after{
         content: '';
         width: 20px;
-        height: 20px;
+        height: 12px;
         display: block;
-        margin-left: 5px;
+        margin-left: $btn-icon-gutter;
         position: relative;
+        right: 0;
         @include svgicons($color, 'right-arrow'); 
         @include transition(all 0.15s ease-in-out, left 0.15s ease-in-out, right 0.15s ease-in-out); //check $btn-transition
-
+        
     }
     @include hover(){
         &:after{
-            right: - $btn-icon-gutter;
+            right: - $btn-icon-gutter/2;
         }
     }  
 }
@@ -29,7 +30,8 @@
     @include rte-link-arrow($body-color);
     @extend .btn;
     @extend .btn-link;
-}
+    @extend .btn-link-dark;
+} 
 
 .btn-rte{ 
     

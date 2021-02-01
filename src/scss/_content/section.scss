@@ -1,0 +1,21 @@
+//wtg_section
+.outbox {
+    &.gray, &.white{
+        //auto space inside section top
+        
+        padding-top: $spacer-large;
+        @include media-breakpoint-down(md) {
+            padding-top: $spacer-medium; 
+        }
+
+        //auto space inside section bottom
+        &:after{
+            content: '';
+            display: block;
+            margin-top: $spacer-large;
+            @include media-breakpoint-down(md) {
+                margin-top: $spacer-medium; 
+            }
+        }
+    }
+}
