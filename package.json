@@ -12,8 +12,8 @@
     "prod": "grunt prod",
     "dev": "grunt dev",
     "watch": "grunt watch",
-    "server": "grunt server:local",
-    "start": "grunt server:local",
+    "server": "grunt server",
+    "start": "grunt server",
     "sprite": "grunt sprite"
   },
   "browserslist": [

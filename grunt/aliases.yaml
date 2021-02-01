@@ -17,12 +17,19 @@ prod:
 server:
  description: 'Run server for frontend developer'
  tasks:
-  - connect
+  - connect:local
   - 'concurrent:development'
   - 'concurrent:sprite'
   - ssi
   - watch
-  
+remote:
+ description: 'Run server for backend developer'
+ tasks:
+  - connect:remote
+  - 'concurrent:development'
+  - 'concurrent:sprite'
+  - ssi
+  - watch  
 sprite:
  description: 'Build SVG sprite and JS injectiion file'
  tasks:

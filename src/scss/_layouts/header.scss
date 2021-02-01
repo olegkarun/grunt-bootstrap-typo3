@@ -1,7 +1,5 @@
-//setup setup in skins mode
-
 .default-header-skin{
-    box-shadow: 0 0 30px rgba($black, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     background-color: rgba($black, 0.8);
     .navbar-logo {
         opacity: 1;
@@ -9,16 +7,16 @@
             opacity: 0;
         }
     }    
-} 
+}
+
+
 .home-header-skin{
     box-shadow: none;
     background-color: transparent;
-
     @include media-breakpoint-down(md) {
-        box-shadow: 0 0 30px rgba($black, 0.1);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
         background-color: rgba($black, 0.8);
     }
-
     .navbar-logo {
         @include media-breakpoint-down(md) {
             opacity: 1;
@@ -32,6 +30,8 @@
     }
 }
 
+
+
 .open-header-skin{
     background-color: $white;
     box-shadow: none;
@@ -43,18 +43,31 @@
             opacity: 0;
         }
     }
-    .nav {
-        &-link {
-            @include media-breakpoint-up(lg) {
-                color: $brand-gray-dark !important;
-            }
-        }
 
-        &-search {
-            svg {
-                fill: $brand-gray-dark !important;
+    .navbar-nav {
+        .nav-item {
+            .nav-controls {
+                .nav-link{
+                    @include media-breakpoint-up(lg) {
+                        color: $brand-gray-dark;
+                    } 
+                }
+            }
+            .nav-search {
+                svg {
+                    fill: $brand-gray-dark;
+                }
             }
         }
+    }
+    
+    //mobile search control
+    .navbar{
+        .nav-search {
+            svg {
+                fill: $brand-gray-dark;
+            }
+        }   
     }
 
     .toggler{ 
@@ -70,6 +83,7 @@
     }
 }
 
+
 .website-header {
     height: 128px;
     display: flex;
@@ -83,7 +97,8 @@
     @include media-breakpoint-down(md) {
         height: 94px;
     }
-    .navbar{        
+
+    .navbar{
         &-brand {
             position: relative;
         }
@@ -115,29 +130,29 @@
     }
 }
 
-//rules for existing skins
+//rules
+
 
 // priority medium
-.website-header{
-    .default {
+.website-header.home {
+    &:not(.dark){
+        @extend .home-header-skin;
+    }
+    //on scroll
+    &.dark{
         @extend .default-header-skin;
-    }
+    } 
+}
 
-    &.home {
-        &:not(.dark){
-            @extend .home-header-skin;
-        }
-        //on scroll
-        &.dark{
-            @extend .default-header-skin;
-        } 
-    }
+.website-header.default {
+    @extend .default-header-skin;
+}
 
-    .menu-open{
-        // priority high
-        .website-header {
-            @extend .open-header-skin; 
+.website-wrapper.menu-open{
+    // priority high
+    .website-header {
+        @extend .open-header-skin; 
 
-        }
     }
 }
+
