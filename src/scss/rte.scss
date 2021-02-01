@@ -3,7 +3,7 @@
 @import "_mixin/rem"; 
 
 // Your custom variables should be here
-@import "_custom/variables.scss";
+@import "_variables/import.scss";
 
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/root";
@@ -26,8 +26,8 @@
 @import "_mixin/import";
 
 //custom styles for RTE
-@import "_base/import"; 
-@import "_custom/_rte";
+@import "_base/import";  
+@import "_base/_rte";
 
 body{
     background: #fff;
