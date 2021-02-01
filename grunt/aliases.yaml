@@ -1,0 +1,37 @@
+default:
+ description: 'default - Develop task list'
+ tasks:
+  - dev
+dev:
+ description: 'Develop task list'
+ tasks:
+  - 'concurrent:sprite'
+  - 'concurrent:development'
+  - watch
+prod:
+ description: 'Stage task lists'
+ tasks:
+  - 'concurrent:sprite'     
+  - 'concurrent:production'
+  - 'concurrent:minify'
+server:
+ description: 'Run server for frontend developer'
+ tasks:
+  - connect:local
+  - 'concurrent:development'
+  - 'concurrent:sprite'
+  - ssi
+  - watch
+remote:
+ description: 'Run server for backend developer'
+ tasks:
+  - connect:remote
+  - 'concurrent:development'
+  - 'concurrent:sprite'
+  - ssi
+  - watch  
+sprite:
+ description: 'Build SVG sprite and JS injectiion file'
+ tasks:
+  - svgstore
+  - svginjector

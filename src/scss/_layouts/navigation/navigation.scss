@@ -33,7 +33,13 @@
                     position: relative;
                     letter-spacing: 0.35px;
 
-                    &.active {
+                    &.current {
+                        color: $brand-red;
+                    }
+                }
+
+                .nav-toggler:not(.collapsed){
+                    & + .nav-link{
                         &::after {
                             content: "";
                             display: block;
@@ -145,7 +151,7 @@
             }
             //end columns
         }
-        
+
         &-container{
             padding-top: $navigation-spacer/2;
         }

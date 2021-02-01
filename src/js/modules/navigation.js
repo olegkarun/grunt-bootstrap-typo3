@@ -33,7 +33,6 @@ export default function websiteNavigation(cssBreakpoints) {
         viewportWidth = $(window).width();
         var currentBreakpoint = (viewportWidth < cssBreakpoints.md) ? 'mobile' : 'desktop';
         if (initBreakpoint !== currentBreakpoint) {
-            console.log(currentBreakpoint);
             initBreakpoint = (viewportWidth < cssBreakpoints.md) ? 'mobile' : 'desktop';            
             $header.find('.collapse.show').collapse('hide');
         }

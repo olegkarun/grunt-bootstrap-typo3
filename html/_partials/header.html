@@ -2,8 +2,8 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg" id="navbar">
         <a class="navbar-brand" href="#">
-            <svg class="navbar-logo"><use xlink:href="#wtg-logo"></use></svg>
-            <svg class="navbar-logo white"><use xlink:href="#wtg-logo-home"></use></svg>
+            <svg class="navbar-logo"><use xlink:href="#icon-wtg-logo"></use></svg>
+            <svg class="navbar-logo white"><use xlink:href="#icon-wtg-logo-home"></use></svg>
         </a>
         <button class="btn nav-search nav-search-mobile">
             <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
@@ -39,7 +39,7 @@
                     <li class="nav-item">
                         <div class="nav-controls">
                             <button class="nav-toggler collapsed" data-target="#m-1" data-toggle="collapse" aria-expanded="false" aria-controls="m-1"></button>
-                            <a class="nav-link" href="#">Root level 1</a>
+                            <a class="nav-link current" href="#">Root level</a>
                         </div>
 
                         <div class="collapse nav-dropdown" id="m-1" data-parent="#mainNav">
@@ -64,12 +64,12 @@
                                                     <li class="subnav-item">
                                                         <div class="nav-controls">
                                                             <button class="nav-toggler collapsed" data-target="#m-1-1-1" data-toggle="collapse" aria-expanded="false" aria-controls="m-1-1-1"></button>
-                                                            <span class="subnav-link">Second Level</span>
+                                                            <span class="subnav-link">Contact Center</span>
                                                         </div>
                                                         <div class="collapse"  id="m-1-1-1">
                                                             <ul class="subnav third-level">
                                                                 <li class="subnav-item">
-                                                                    <a href="" class="subnav-link">Video</a>
+                                                                    <a href="#" class="subnav-link">Video</a>
                                                                 </li>
                                                                 <li class="subnav-item">
                                                                     <a href="#" class="subnav-link new">Voice <svg class="icon icon-budget-new"><use  xlink:href="#icon-budget-new"></use></svg></a>
@@ -88,12 +88,25 @@
                                                     </li>
                                                     <li class="subnav-item">
                                                         <div class="nav-controls">
-                                                            <a href="#" class="subnav-link">Second Level link 1</a>
+                                                            <span href="#" class="subnav-link">UC / UCC [nolink]</span>
+                                                            <button class="nav-toggler collapsed" data-target="#m-1-1-2" data-toggle="collapse" aria-expanded="false" aria-controls="m-1-1-2"></button>
                                                         </div>
+                                                        <div class="collapse"  id="m-1-1-2">
+                                                            <ul class="subnav third-level">
+                                                                <li class="subnav-item">
+                                                                    <a href="#" class="subnav-link">Multichannel Contact Center</a>
+                                                                </li>
+
+                                                                <li class="subnav-item">
+                                                                    <a href="#" class="subnav-link">Routing & Switching</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>                                                                        
                                                     </li>
+
                                                     <li class="subnav-item">
                                                         <div class="nav-controls">
-                                                            <a href="#" class="subnav-link">Second Level link 2</a>
+                                                            <a href="#" class="subnav-link">Second Level [link]</a>
                                                         </div>
                                                     </li>                                                                    
                                                 </ul>     
@@ -103,7 +116,7 @@
                                         <li class="subnav-item">
                                             <div class="nav-controls">
                                                 <button class="nav-toggler collapsed" href="#m-1-2" data-toggle="collapse" aria-expanded="false" aria-controls="m-1-2"></button>
-                                                <span class="subnav-link">First level <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></span>
+                                                <a href="#" class="subnav-link">First level <svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg></a>
                                             </div>
 
                                             <div class="collapse" id="m-1-2">
@@ -139,13 +152,11 @@
                     <li class="nav-item">
                         <div class="nav-controls">
                             <button class="nav-toggler collapsed" data-target="#m-2" data-toggle="collapse" aria-expanded="false" aria-controls="m-2"></button>
-                            <a class="nav-link active" href="#">Root level 2</a>
+                            <a class="nav-link active" href="#">Products</a>
                         </div>
 
                         <div class="collapse nav-dropdown" id="m-2" data-parent="#mainNav">
-
                             <div class="nav-container">
-
                                 <div class="nav-dropdown-panel">
                                     <a class="btn-link">
                                         Root level 2<svg class="icon arrow-right"><use xlink:href="#icon-right-arrow"></use></svg>
@@ -171,12 +182,37 @@
                             </div>
                         </div>
                     </li>
-                    
+
+                    <li class="nav-item">
+                        <div class="nav-controls">
+                            <a class="nav-link" href="#">Service</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="nav-controls">
+                            <a class="nav-link" href="#">Produkte</a>
+                        </div>
+                    </li>                                    
+
+                    <li class="nav-item">
+                        <div class="nav-controls">
+                            <a class="nav-link" href="#">Unternehmen</a>
+                        </div>
+                    </li>   
+
+                    <li class="nav-item">
+                        <div class="nav-controls">
+                            <a class="nav-link" href="#">Karriere</a>
+                        </div>
+                    </li>                                     
+
                     <li class="nav-item icon-search">
                         <button class="btn nav-search">
                             <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
                         </button>
                     </li>
+
 
                 </ul>
 

@@ -9,13 +9,14 @@
 
 !/.gitignore
 !/src
-!/src/**/*
+/src/js/sprite.js
 !/index.html
 !/html/
+!.htaccess
 
 !/package.json
-!/webpack.config.js
-!/webpack.config(2).js
+!/Gruntfile.js
 !/package-lock.json
 !/postcss.config.js
+!/grunt
 !/README.md
