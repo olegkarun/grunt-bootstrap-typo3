@@ -1,30 +1,65 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <!--#include file="_partials/meta/head.html" -->
         <title>Basic elements</title>
-         <!--#include file="_partials/meta/head.html" -->
     </head>    
 
     <body>
 
         <div class="website-wrapper">
 
-            <header class="website-header home"> <!--default-->
+            <header class="website-header home"> 
                 <!--#include file="_partials/header.html" -->
             </header>
 
             <main>
-                <section class="website-stage">
-                    <div class="image-container">
-                        <div class="lazyload bg-img"
-                             data-bgset="
-                             /html/media/images/phone_414-736.jpg [--sm] |
-                             /html/media/images/tablet_1024-1366.jpg [--md] |
-                             /html/media/images/stage/product.jpg"></div>
+
+                <section class="carousel-startpage mb-large">
+                    <div id="stratpage-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="lazyload bg-img"
+                                     data-bgset="
+                                     https://via.placeholder.com/414x736.jpg?text=Phone_414x736+Slide_1 [--sm] |
+                                     https://via.placeholder.com/1024x1366.jpg?text=Tablet+1024x1366+Slide_1 [--md] |
+                                     /html/media/images/stage/startpage.jpg"></div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="lazyload bg-img"
+                                     data-bgset="
+                                     https://via.placeholder.com/414x736.jpg?text=Phone+414x736+Slide_2 [--sm] |
+                                     https://via.placeholder.com/1024x1366.jpg?text=Tablet+1024x1366+Slide_2 [--md] |
+                                     https://via.placeholder.com/1024x1366.jpg?text=Desktop+1920x1080+Slide_2"></div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="lazyload bg-img"
+                                     data-bgset="
+                                     https://via.placeholder.com/414x736.jpg?text=Phone+414x736+Slide_3 [--sm] |
+                                     https://via.placeholder.com/1024x1366.jpg?text=Tablet+1024x1366+Slide_3 [--md] |
+                                     https://via.placeholder.com/1024x1366.jpg?text=Desktop+1920x1080+Slide_3"></div>
+                            </div>
+                        </div>
+                        
+                            <a class="carousel-control-prev" href="#stratpage-carousel" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#stratpage-carousel" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
                     </div>
                 </section>
 
-       
+                <section class="startpage-stage">
+                    <div class="content-stage-container">
+                        <!-- @todo Video.JS + Carousel -->
+                        <div class="carousel">
+
+                        </div>
+                    </div>
+                </section>
 
                 <section class="content-item mb-large wtg_section">
                     <div class="outbox gray">
@@ -501,11 +536,11 @@
                     </div>
                 </section> 
             </main>
-            
+
             <!--#include file="_partials/footer.html" -->
         </div>
 
         <!--#include file="_partials/meta/js.html" -->
-         
+
     </body>
 </html>

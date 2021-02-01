@@ -1,6 +1,14 @@
-.website-stage{
+.content-stage{
+    &.empty{
+        padding-top: $header-height + 40px;
+        @include media-breakpoint-down(md) {
+            padding-top: $header-height-sm + 40px;
+        }
+
+    }
+
     position:relative;
-    .image-container{
+    &-container{
         position:relative;
         z-index: 5;
         height: 650px;
@@ -8,7 +16,7 @@
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        
+
         .bg-image{
             position: absolute;
             top: 0;
